@@ -232,12 +232,16 @@
             <div class="panel-heading" style="border-color: #E5E5E5; margin-top:-1px;margin-bottom:5px;"
                  id="bar-menu">
                 <div class="row">
-                    <button class="btn btn-default" id="add" onclick="$('#message-box-edit-liste').modal('show')" data-toggle="tooltip"
-                            data-placement="bottom" title="Ajouter liste" style="font-size:20px;"><span class="fa fa-plus"></span></button>
+                    <button class="btn btn-default" id="add" onclick="$('#message-box-edit-list').modal('show')"
+                            data-toggle="tooltip"
+                            data-placement="bottom" title="Ajouter liste" style="font-size:20px;"><span
+                            class="fa fa-plus"></span></button>
                     <button class="btn btn-default" id="modify" onclick="composer()" data-toggle="tooltip"
-                            data-placement="bottom" title="Modifier liste" style="font-size:20px;"><span class="fa fa-edit"></span></button>
+                            data-placement="bottom" title="Modifier liste" style="font-size:20px;"><span
+                            class="fa fa-edit"></span></button>
                     <button class="btn btn-default" id="delete" onclick="composer()" data-toggle="tooltip"
-                            data-placement="bottom" title="Supprimer liste" style="font-size:20px;"><span class="fa fa-trash"></span></button>
+                            data-placement="bottom" title="Supprimer liste" style="font-size:20px;"><span
+                            class="fa fa-trash"></span></button>
                 </div>
             </div>
             <!-- top tiles -->
@@ -254,265 +258,8 @@
             </div>
             <!-- /top tiles -->
             <div class="row">
-                <!--<div class="col-md-4 col-sm-4 col-xs-12">
-                    <div class="x_panel tile fixed_height_320">
-                        <div class="x_title">
-                            <h2>App Versions</h2>
-                            <ul class="nav navbar-right panel_toolbox">
-                                <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-                                </li>
-                                <li class="dropdown">
-                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
-                                       aria-expanded="false"><i class="fa fa-wrench"></i></a>
-                                    <ul class="dropdown-menu" role="menu">
-                                        <li><a href="#">Settings 1</a>
-                                        </li>
-                                        <li><a href="#">Settings 2</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li><a class="close-link"><i class="fa fa-close"></i></a>
-                                </li>
-                            </ul>
-                            <div class="clearfix"></div>
-                        </div>
-                        <div class="x_content">
-                            <h4>App Usage across versions</h4>
-                            <div class="widget_summary">
-                                <div class="w_left w_25">
-                                    <span>0.1.5.2</span>
-                                </div>
-                                <div class="w_center w_55">
-                                    <div class="progress">
-                                        <div class="progress-bar bg-green" role="progressbar" aria-valuenow="60"
-                                             aria-valuemin="0" aria-valuemax="100" style="width: 66%;">
-                                            <span class="sr-only">60% Complete</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="w_right w_20">
-                                    <span>123k</span>
-                                </div>
-                                <div class="clearfix"></div>
-                            </div>
-
-                            <div class="widget_summary">
-                                <div class="w_left w_25">
-                                    <span>0.1.5.3</span>
-                                </div>
-                                <div class="w_center w_55">
-                                    <div class="progress">
-                                        <div class="progress-bar bg-green" role="progressbar" aria-valuenow="60"
-                                             aria-valuemin="0" aria-valuemax="100" style="width: 45%;">
-                                            <span class="sr-only">60% Complete</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="w_right w_20">
-                                    <span>53k</span>
-                                </div>
-                                <div class="clearfix"></div>
-                            </div>
-                            <div class="widget_summary">
-                                <div class="w_left w_25">
-                                    <span>0.1.5.4</span>
-                                </div>
-                                <div class="w_center w_55">
-                                    <div class="progress">
-                                        <div class="progress-bar bg-green" role="progressbar" aria-valuenow="60"
-                                             aria-valuemin="0" aria-valuemax="100" style="width: 25%;">
-                                            <span class="sr-only">60% Complete</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="w_right w_20">
-                                    <span>23k</span>
-                                </div>
-                                <div class="clearfix"></div>
-                            </div>
-                            <div class="widget_summary">
-                                <div class="w_left w_25">
-                                    <span>0.1.5.5</span>
-                                </div>
-                                <div class="w_center w_55">
-                                    <div class="progress">
-                                        <div class="progress-bar bg-green" role="progressbar" aria-valuenow="60"
-                                             aria-valuemin="0" aria-valuemax="100" style="width: 5%;">
-                                            <span class="sr-only">60% Complete</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="w_right w_20">
-                                    <span>3k</span>
-                                </div>
-                                <div class="clearfix"></div>
-                            </div>
-                            <div class="widget_summary">
-                                <div class="w_left w_25">
-                                    <span>0.1.5.6</span>
-                                </div>
-                                <div class="w_center w_55">
-                                    <div class="progress">
-                                        <div class="progress-bar bg-green" role="progressbar" aria-valuenow="60"
-                                             aria-valuemin="0" aria-valuemax="100" style="width: 2%;">
-                                            <span class="sr-only">60% Complete</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="w_right w_20">
-                                    <span>1k</span>
-                                </div>
-                                <div class="clearfix"></div>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4 col-sm-4 col-xs-12">
-                    <div class="x_panel tile fixed_height_320 overflow_hidden">
-                        <div class="x_title">
-                            <h2>Device Usage</h2>
-                            <ul class="nav navbar-right panel_toolbox">
-                                <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-                                </li>
-                                <li class="dropdown">
-                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
-                                       aria-expanded="false"><i class="fa fa-wrench"></i></a>
-                                    <ul class="dropdown-menu" role="menu">
-                                        <li><a href="#">Settings 1</a>
-                                        </li>
-                                        <li><a href="#">Settings 2</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li><a class="close-link"><i class="fa fa-close"></i></a>
-                                </li>
-                            </ul>
-                            <div class="clearfix"></div>
-                        </div>
-                        <div class="x_content">
-                            <table class="" style="width:100%">
-                                <tr>
-                                    <th style="width:37%;">
-                                        <p>Top 5</p>
-                                    </th>
-                                    <th>
-                                        <div class="col-lg-7 col-md-7 col-sm-7 col-xs-7">
-                                            <p class="">Device</p>
-                                        </div>
-                                        <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5">
-                                            <p class="">Progress</p>
-                                        </div>
-                                    </th>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <canvas class="canvasDoughnut" height="140" width="140"
-                                                style="margin: 15px 10px 10px 0"></canvas>
-                                    </td>
-                                    <td>
-                                        <table class="tile_info">
-                                            <tr>
-                                                <td>
-                                                    <p><i class="fa fa-square blue"></i>IOS </p>
-                                                </td>
-                                                <td>30%</td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <p><i class="fa fa-square green"></i>Android </p>
-                                                </td>
-                                                <td>10%</td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <p><i class="fa fa-square purple"></i>Blackberry </p>
-                                                </td>
-                                                <td>20%</td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <p><i class="fa fa-square aero"></i>Symbian </p>
-                                                </td>
-                                                <td>15%</td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <p><i class="fa fa-square red"></i>Others </p>
-                                                </td>
-                                                <td>30%</td>
-                                            </tr>
-                                        </table>
-                                    </td>
-                                </tr>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="col-md-4 col-sm-4 col-xs-12">
-                    <div class="x_panel tile fixed_height_320">
-                        <div class="x_title">
-                            <h2>Quick Settings</h2>
-                            <ul class="nav navbar-right panel_toolbox">
-                                <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-                                </li>
-                                <li class="dropdown">
-                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
-                                       aria-expanded="false"><i class="fa fa-wrench"></i></a>
-                                    <ul class="dropdown-menu" role="menu">
-                                        <li><a href="#">Settings 1</a>
-                                        </li>
-                                        <li><a href="#">Settings 2</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li><a class="close-link"><i class="fa fa-close"></i></a>
-                                </li>
-                            </ul>
-                            <div class="clearfix"></div>
-                        </div>
-                        <div class="x_content">
-                            <div class="dashboard-widget-content">
-                                <ul class="quick-list">
-                                    <li><i class="fa fa-calendar-o"></i><a href="#">Settings</a>
-                                    </li>
-                                    <li><i class="fa fa-bars"></i><a href="#">Subscription</a>
-                                    </li>
-                                    <li><i class="fa fa-bar-chart"></i><a href="#">Auto Renewal</a></li>
-                                    <li><i class="fa fa-line-chart"></i><a href="#">Achievements</a>
-                                    </li>
-                                    <li><i class="fa fa-bar-chart"></i><a href="#">Auto Renewal</a></li>
-                                    <li><i class="fa fa-line-chart"></i><a href="#">Achievements</a>
-                                    </li>
-                                    <li><i class="fa fa-area-chart"></i><a href="#">Logout</a>
-                                    </li>
-                                </ul>
-
-                                <div class="sidebar-widget">
-                                    <h4>Profile Completion</h4>
-                                    <canvas width="150" height="80" id="chart_gauge_01" class=""
-                                            style="width: 160px; height: 100px;"></canvas>
-                                    <div class="goal-wrapper">
-                                        <span id="gauge-text" class="gauge-value pull-left">0</span>
-                                        <span class="gauge-value pull-left">%</span>
-                                        <span id="goal-text" class="goal-value pull-right">100%</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
--->
-
                 <div class="col-md-8 col-sm-8 col-xs-12">
-
                     <div class="row">
-
                         <!-- Start to do list -->
                         <div class="col-md-6 col-sm-6 col-xs-12">
                             <div class="x_panel">
@@ -539,7 +286,6 @@
                                     <div class="clearfix"></div>
                                 </div>
                                 <div class="x_content">
-
                                     <div class="">
                                         <ul class="to_do">
                                             <li>
@@ -794,16 +540,16 @@
         <!-- /footer content -->
     </div>
 
-
-    <div class="modal fade" id="message-box-edit-liste" role="dialog">
+    <div class="modal fade" id="message-box-edit-list" role="dialog">
         <div class="modal-dialog">
 
             <div class="modal-content">
 
-                <form class="form-horizontal" id="myForm">
+                <form class="form-horizontal" id="listForm">
                     <div class="modal-header">
+
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        <h4 class="modal-title">Catégorie</h4>
+                        <h4 class="modal-title">Liste</h4>
                     </div>
                     <div class="modal-body">
 
@@ -813,61 +559,17 @@
 
                                 <div class="form-group col-md-12">
 
-                                    <label class="col-md-3 control-label">Titre : </label>
+                                    <label class="col-md-3 control-label">Titre: </label>
 
                                     <div class="form control col-md-6">
 
-                                        <input type="text" class="form-control" id="nomCat" name="nomcat" required/>
+                                        <input type="text" class="form-control" id="titList" name="titList" required/>
                                     </div>
                                 </div>
-
                                 <div class="form-group col-md-12">
-
-                                    <label class="col-md-3 control-label">Description : </label>
-
+                                    <label class="col-md-3 control-label">Description: </label>
                                     <div class="form control col-md-6">
-
-                                        <input type="text" class="form-control" id="nomCat" name="nomcat" required/>
-                                    </div>
-                                </div>
-
-
-
-                                <div class="form-group col-md-12">
-
-                                    <label class="col-md-3  control-label">Couleur :</label>
-
-                                    <div class="col-md-6 col-xs-12"><!--class="form-control select" -->
-                                        <select data-show-icon="true" id="CouleurCat">
-
-                                            <option data-content="<i class='fa fa-bookmark-o'></i>"
-                                                    selected></option>
-                                            <option data-content="<i class='fa fa-bookmark' style=color:#e5696f ></i>"></option>
-                                            <option data-content="<i class='fa fa-bookmark' style=color:#f4985a ></i>"></option>
-                                            <option data-content="<i class='fa fa-bookmark' style=color:#ffcc53 ></i>"></option>
-                                            <option data-content="<i class='fa fa-bookmark' style=color:#fff95b ></i>"></option>
-                                            <option data-content="<i class='fa fa-bookmark' style=color:#88d27f ></i>"></option>
-                                            <option data-content="<i class='fa fa-bookmark' style=color:#7fd3b7 ></i>"></option>
-                                            <option data-content="<i class='fa fa-bookmark' style=color:#b3c38e ></i>"></option>
-                                            <option data-content="<i class='fa fa-bookmark' style=color:#779eda ></i>"></option>
-                                            <option data-content="<i class='fa fa-bookmark' style=color:#967dd2 ></i>"></option>
-                                            <option data-content="<i class='fa fa-bookmark' style=color:#c587a5 ></i>"></option>
-                                            <option data-content="<i class='fa fa-bookmark' style=color:#c7cede ></i>"></option>
-                                            <option data-content="<i class='fa fa-bookmark' style=color:#4b5978 ></i>"></option>
-                                            <option data-content="<i class='fa fa-bookmark' style=color:#a8a8a8 ></i>"></option>
-                                            <option data-content="<i class='fa fa-bookmark' style=color:#525252 ></i>"></option>
-                                            <option data-content="<i class='fa fa-bookmark' style=color:black></i>"></option>
-                                            <option data-content="<i class='fa fa-bookmark' style=color:#ab1d24></i>"></option>
-                                            <option data-content="<i class='fa fa-bookmark' style=color:#b14f0d></i>"></option>
-                                            <option data-content="<i class='fa fa-bookmark' style=color:#ab7b05></i>"></option>
-                                            <option data-content="<i class='fa fa-bookmark' style=color:#999400></i>"></option>
-                                            <option data-content="<i class='fa fa-bookmark' style=color:#35792b></i>"></option>
-                                            <option data-content="<i class='fa fa-bookmark' style=color:#2e7d64></i>"></option>
-                                            <option data-content="<i class='fa fa-bookmark' style=color:#5f6c3a></i>"></option>
-                                            <option data-content="<i class='fa fa-bookmark' style=color:#2a5191></i>"></option>
-                                            <option data-content="<i class='fa fa-bookmark' style=color:#50328f></i>"></option>
-                                            <option data-content="<i class='fa fa-bookmark' style=color:#82375f></i>"></option>
-                                        </select>
+                                        <textarea  name="descList" id="descList" rows="5" style="margin: 0px; width: 239px; height: 92px;" required></textarea>
                                     </div>
                                 </div>
                             </div>
@@ -879,9 +581,10 @@
 
                         <button class="btn btn-danger" data-dismiss="modal"
                                 style="margin-left : 10px;"
-                                onclick="$('#message-box-edit-liste').modal('hide')"> <span class="fa fa-times-circle fa-right"></span>Annuler
+                                onclick="$('#message-box-edit-list').modal('hide')"><span
+                                class="fa fa-times-circle fa-right"></span>Annuler
                         </button>
-                        <button class="btn btn-info" type="submit" onclick="saveCategorie()"><span
+                        <button class="btn btn-info" type="submit" onclick="saveList()"><span
                                 class="fa fa-floppy-o"></span>Enregistrer
                         </button>
                     </div>
@@ -889,8 +592,34 @@
                 </form>
             </div>
         </div>
+    </div>
+
 
 </div>
+
+<script type="text/javascript">
+    $().ready(function () {
+        $('#listForm').validate({
+            rules: {
+                titList: {
+                    required: true
+
+
+                    /* validators: {
+                     notEmpty:{
+                     message: 'Veuillez saisir un nom de catégorie'
+
+
+                     }}*/
+                },
+            },
+            messages: {
+                titList: "Veuillez saisir un titre pour votre liste",
+
+            }
+        });
+    });
+</script>
 
 <!-- jQuery -->
 <script src="../vendors/jquery/dist/jquery.min.js"></script>
