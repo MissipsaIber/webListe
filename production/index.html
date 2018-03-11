@@ -41,17 +41,14 @@
                 </div>
 
                 <div class="clearfix"></div>
-
                 <!-- /menu profile quick info -->
-
                 <br/>
-
                 <!-- sidebar menu -->
                 <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
                     <div class="menu_section">
                         <h3>General</h3>
                         <ul class="nav side-menu">
-                            <li><a><i class="fa fa-home"></i> Home <span class="fa fa-chevron-down"></span></a>
+                            <li><a><i class="fa fa-home"></i> Accueil <span class="fa fa-chevron-down"></span></a>
                                 <ul class="nav child_menu">
                                     <li><a href="Ajouter_liste.html">Ajouter liste</a></li>
                                 </ul>
@@ -229,132 +226,35 @@
                 </nav>
             </div>
         </div>
-        <!-- /top navigation -->
 
         <!-- page content -->
         <div class="right_col" role="main">
+            <div class="panel-heading" style="border-color: #E5E5E5; margin-top:-1px;margin-bottom:5px;"
+                 id="bar-menu">
+                <div class="row">
+                    <button class="btn btn-default" id="add" onclick="$('#message-box-edit-liste').modal('show')" data-toggle="tooltip"
+                            data-placement="bottom" title="Ajouter liste" style="font-size:20px;"><span class="fa fa-plus"></span></button>
+                    <button class="btn btn-default" id="modify" onclick="composer()" data-toggle="tooltip"
+                            data-placement="bottom" title="Modifier liste" style="font-size:20px;"><span class="fa fa-edit"></span></button>
+                    <button class="btn btn-default" id="delete" onclick="composer()" data-toggle="tooltip"
+                            data-placement="bottom" title="Supprimer liste" style="font-size:20px;"><span class="fa fa-trash"></span></button>
+                </div>
+            </div>
             <!-- top tiles -->
             <div class="row tile_count">
-                <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
-                    <span class="count_top"><i class="fa fa-user"></i> Total Users</span>
-                    <div class="count">2500</div>
-                    <span class="count_bottom"><i class="green">4% </i> From last Week</span>
+                <div class="col-md-4 col-sm-4 col-xs-6 tile_stats_count">
+                    <span class="count_top"><i class="fa fa-tasks"></i> Nombre total de listes privées</span>
+                    <div class="count green">2500</div>
+
                 </div>
-                <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
-                    <span class="count_top"><i class="fa fa-clock-o"></i> Average Time</span>
+                <div class="col-md-4 col-sm-4 col-xs-6 tile_stats_count">
+                    <span class="count_top"><i class="fa fa-tasks"></i> Nombre total de listes public</span>
                     <div class="count">123.50</div>
-                    <span class="count_bottom"><i class="green"><i
-                            class="fa fa-sort-asc"></i>3% </i> From last Week</span>
-                </div>
-                <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
-                    <span class="count_top"><i class="fa fa-user"></i> Total Males</span>
-                    <div class="count green">2,500</div>
-                    <span class="count_bottom"><i class="green"><i
-                            class="fa fa-sort-asc"></i>34% </i> From last Week</span>
-                </div>
-                <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
-                    <span class="count_top"><i class="fa fa-user"></i> Total Females</span>
-                    <div class="count">4,567</div>
-                    <span class="count_bottom"><i class="red"><i
-                            class="fa fa-sort-desc"></i>12% </i> From last Week</span>
-                </div>
-                <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
-                    <span class="count_top"><i class="fa fa-user"></i> Total Collections</span>
-                    <div class="count">2,315</div>
-                    <span class="count_bottom"><i class="green"><i
-                            class="fa fa-sort-asc"></i>34% </i> From last Week</span>
-                </div>
-                <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
-                    <span class="count_top"><i class="fa fa-user"></i> Total Connections</span>
-                    <div class="count">7,325</div>
-                    <span class="count_bottom"><i class="green"><i
-                            class="fa fa-sort-asc"></i>34% </i> From last Week</span>
                 </div>
             </div>
             <!-- /top tiles -->
-
             <div class="row">
-                <div class="col-md-12 col-sm-12 col-xs-12">
-                    <div class="dashboard_graph">
-
-                        <div class="row x_title">
-                            <div class="col-md-6">
-                                <h3>Network Activities
-                                    <small>Graph title sub-title</small>
-                                </h3>
-                            </div>
-                            <div class="col-md-6">
-                                <div id="reportrange" class="pull-right"
-                                     style="background: #fff; cursor: pointer; padding: 5px 10px; border: 1px solid #ccc">
-                                    <i class="glyphicon glyphicon-calendar fa fa-calendar"></i>
-                                    <span>December 30, 2014 - January 28, 2015</span> <b class="caret"></b>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-md-9 col-sm-9 col-xs-12">
-                            <div id="chart_plot_01" class="demo-placeholder"></div>
-                        </div>
-                        <div class="col-md-3 col-sm-3 col-xs-12 bg-white">
-                            <div class="x_title">
-                                <h2>Top Campaign Performance</h2>
-                                <div class="clearfix"></div>
-                            </div>
-
-                            <div class="col-md-12 col-sm-12 col-xs-6">
-                                <div>
-                                    <p>Facebook Campaign</p>
-                                    <div class="">
-                                        <div class="progress progress_sm" style="width: 76%;">
-                                            <div class="progress-bar bg-green" role="progressbar"
-                                                 data-transitiongoal="80"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div>
-                                    <p>Twitter Campaign</p>
-                                    <div class="">
-                                        <div class="progress progress_sm" style="width: 76%;">
-                                            <div class="progress-bar bg-green" role="progressbar"
-                                                 data-transitiongoal="60"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-12 col-sm-12 col-xs-6">
-                                <div>
-                                    <p>Conventional Media</p>
-                                    <div class="">
-                                        <div class="progress progress_sm" style="width: 76%;">
-                                            <div class="progress-bar bg-green" role="progressbar"
-                                                 data-transitiongoal="40"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div>
-                                    <p>Bill boards</p>
-                                    <div class="">
-                                        <div class="progress progress_sm" style="width: 76%;">
-                                            <div class="progress-bar bg-green" role="progressbar"
-                                                 data-transitiongoal="50"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-
-                        <div class="clearfix"></div>
-                    </div>
-                </div>
-
-            </div>
-            <br/>
-
-            <div class="row">
-
-
-                <div class="col-md-4 col-sm-4 col-xs-12">
+                <!--<div class="col-md-4 col-sm-4 col-xs-12">
                     <div class="x_panel tile fixed_height_320">
                         <div class="x_title">
                             <h2>App Versions</h2>
@@ -607,265 +507,389 @@
                 </div>
 
             </div>
+-->
 
+                <div class="col-md-8 col-sm-8 col-xs-12">
 
-            <div class="col-md-8 col-sm-8 col-xs-12">
+                    <div class="row">
 
-                <div class="row">
-
-                    <!-- Start to do list -->
-                    <div class="col-md-6 col-sm-6 col-xs-12">
-                        <div class="x_panel">
-                            <div class="x_title">
-                                <h2>To Do List
-                                    <small>Sample tasks</small>
-                                </h2>
-                                <ul class="nav navbar-right panel_toolbox">
-                                    <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-                                    </li>
-                                    <li class="dropdown">
-                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
-                                           aria-expanded="false"><i class="fa fa-wrench"></i></a>
-                                        <ul class="dropdown-menu" role="menu">
-                                            <li><a href="#">Settings 1</a>
-                                            </li>
-                                            <li><a href="#">Settings 2</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li><a class="close-link"><i class="fa fa-close"></i></a>
-                                    </li>
-                                </ul>
-                                <div class="clearfix"></div>
-                            </div>
-                            <div class="x_content">
-
-                                <div class="">
-                                    <ul class="to_do">
-                                        <li>
-                                            <p>
-                                                <input type="checkbox" class="flat"> Schedule meeting with new client
-                                            </p>
+                        <!-- Start to do list -->
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <div class="x_panel">
+                                <div class="x_title">
+                                    <h2>To Do List
+                                        <small>Sample tasks</small>
+                                    </h2>
+                                    <ul class="nav navbar-right panel_toolbox">
+                                        <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                                         </li>
-                                        <li>
-                                            <p>
-                                                <input type="checkbox" class="flat"> Create email address for new intern
-                                            </p>
+                                        <li class="dropdown">
+                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                               aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                                            <ul class="dropdown-menu" role="menu">
+                                                <li><a href="#">Settings 1</a>
+                                                </li>
+                                                <li><a href="#">Settings 2</a>
+                                                </li>
+                                            </ul>
                                         </li>
-                                        <li>
-                                            <p>
-                                                <input type="checkbox" class="flat"> Have IT fix the network printer</p>
-                                        </li>
-                                        <li>
-                                            <p>
-                                                <input type="checkbox" class="flat"> Copy backups to offsite location
-                                            </p>
-                                        </li>
-                                        <li>
-                                            <p>
-                                                <input type="checkbox" class="flat"> Food truck fixie locavors mcsweeney
-                                            </p>
-                                        </li>
-                                        <li>
-                                            <p>
-                                                <input type="checkbox" class="flat"> Food truck fixie locavors mcsweeney
-                                            </p>
-                                        </li>
-                                        <li>
-                                            <p>
-                                                <input type="checkbox" class="flat"> Create email address for new intern
-                                            </p>
-                                        </li>
-                                        <li>
-                                            <p>
-                                                <input type="checkbox" class="flat"> Have IT fix the network printer</p>
-                                        </li>
-                                        <li>
-                                            <p>
-                                                <input type="checkbox" class="flat"> Copy backups to offsite location
-                                            </p>
+                                        <li><a class="close-link"><i class="fa fa-close"></i></a>
                                         </li>
                                     </ul>
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div class="x_content">
+
+                                    <div class="">
+                                        <ul class="to_do">
+                                            <li>
+                                                <p>
+                                                    <input type="checkbox" class="flat"> Schedule meeting with new
+                                                    client
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <p>
+                                                    <input type="checkbox" class="flat"> Create email address for new
+                                                    intern
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <p>
+                                                    <input type="checkbox" class="flat"> Have IT fix the network printer
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <p>
+                                                    <input type="checkbox" class="flat"> Copy backups to offsite
+                                                    location
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <p>
+                                                    <input type="checkbox" class="flat"> Food truck fixie locavors
+                                                    mcsweeney
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <p>
+                                                    <input type="checkbox" class="flat"> Food truck fixie locavors
+                                                    mcsweeney
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <p>
+                                                    <input type="checkbox" class="flat"> Create email address for new
+                                                    intern
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <p>
+                                                    <input type="checkbox" class="flat"> Have IT fix the network printer
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <p>
+                                                    <input type="checkbox" class="flat"> Copy backups to offsite
+                                                    location
+                                                </p>
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <!-- Start to do list -->
-                    <div class="col-md-6 col-sm-6 col-xs-12">
-                        <div class="x_panel">
-                            <div class="x_title">
-                                <h2>To Do List
-                                    <small>Sample tasks</small>
-                                </h2>
-                                <ul class="nav navbar-right panel_toolbox">
-                                    <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-                                    </li>
-                                    <li class="dropdown">
-                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
-                                           aria-expanded="false"><i class="fa fa-wrench"></i></a>
-                                        <ul class="dropdown-menu" role="menu">
-                                            <li><a href="#">Settings 1</a>
-                                            </li>
-                                            <li><a href="#">Settings 2</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li><a class="close-link"><i class="fa fa-close"></i></a>
-                                    </li>
-                                </ul>
-                                <div class="clearfix"></div>
-                            </div>
-                            <div class="x_content">
-
-                                <div class="">
-                                    <ul class="to_do">
-                                        <li>
-                                            <p>
-                                                <input type="checkbox" class="flat"> Schedule meeting with new client
-                                            </p>
+                        <!-- Start to do list -->
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <div class="x_panel">
+                                <div class="x_title">
+                                    <h2>To Do List
+                                        <small>Sample tasks</small>
+                                    </h2>
+                                    <ul class="nav navbar-right panel_toolbox">
+                                        <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                                         </li>
-                                        <li>
-                                            <p>
-                                                <input type="checkbox" class="flat"> Create email address for new intern
-                                            </p>
+                                        <li class="dropdown">
+                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                               aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                                            <ul class="dropdown-menu" role="menu">
+                                                <li><a href="#">Settings 1</a>
+                                                </li>
+                                                <li><a href="#">Settings 2</a>
+                                                </li>
+                                            </ul>
                                         </li>
-                                        <li>
-                                            <p>
-                                                <input type="checkbox" class="flat"> Have IT fix the network printer</p>
-                                        </li>
-                                        <li>
-                                            <p>
-                                                <input type="checkbox" class="flat"> Copy backups to offsite location
-                                            </p>
-                                        </li>
-                                        <li>
-                                            <p>
-                                                <input type="checkbox" class="flat"> Food truck fixie locavors mcsweeney
-                                            </p>
-                                        </li>
-                                        <li>
-                                            <p>
-                                                <input type="checkbox" class="flat"> Food truck fixie locavors mcsweeney
-                                            </p>
-                                        </li>
-                                        <li>
-                                            <p>
-                                                <input type="checkbox" class="flat"> Create email address for new intern
-                                            </p>
-                                        </li>
-                                        <li>
-                                            <p>
-                                                <input type="checkbox" class="flat"> Have IT fix the network printer</p>
-                                        </li>
-                                        <li>
-                                            <p>
-                                                <input type="checkbox" class="flat"> Copy backups to offsite location
-                                            </p>
+                                        <li><a class="close-link"><i class="fa fa-close"></i></a>
                                         </li>
                                     </ul>
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div class="x_content">
+
+                                    <div class="">
+                                        <ul class="to_do">
+                                            <li>
+                                                <p>
+                                                    <input type="checkbox" class="flat"> Schedule meeting with new
+                                                    client
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <p>
+                                                    <input type="checkbox" class="flat"> Create email address for new
+                                                    intern
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <p>
+                                                    <input type="checkbox" class="flat"> Have IT fix the network printer
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <p>
+                                                    <input type="checkbox" class="flat"> Copy backups to offsite
+                                                    location
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <p>
+                                                    <input type="checkbox" class="flat"> Food truck fixie locavors
+                                                    mcsweeney
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <p>
+                                                    <input type="checkbox" class="flat"> Food truck fixie locavors
+                                                    mcsweeney
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <p>
+                                                    <input type="checkbox" class="flat"> Create email address for new
+                                                    intern
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <p>
+                                                    <input type="checkbox" class="flat"> Have IT fix the network printer
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <p>
+                                                    <input type="checkbox" class="flat"> Copy backups to offsite
+                                                    location
+                                                </p>
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <!-- End to do list -->
-                    <!-- Start to do list -->
-                    <div class="col-md-6 col-sm-6 col-xs-12">
-                        <div class="x_panel">
-                            <div class="x_title">
-                                <h2>To Do List
-                                    <small>Sample tasks</small>
-                                </h2>
-                                <ul class="nav navbar-right panel_toolbox">
-                                    <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-                                    </li>
-                                    <li class="dropdown">
-                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
-                                           aria-expanded="false"><i class="fa fa-wrench"></i></a>
-                                        <ul class="dropdown-menu" role="menu">
-                                            <li><a href="#">Settings 1</a>
-                                            </li>
-                                            <li><a href="#">Settings 2</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li><a class="close-link"><i class="fa fa-close"></i></a>
-                                    </li>
-                                </ul>
-                                <div class="clearfix"></div>
-                            </div>
-                            <div class="x_content">
-
-                                <div class="">
-                                    <ul class="to_do">
-                                        <li>
-                                            <p>
-                                                <input type="checkbox" class="flat"> Schedule meeting with new client
-                                            </p>
+                        <!-- End to do list -->
+                        <!-- Start to do list -->
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <div class="x_panel">
+                                <div class="x_title">
+                                    <h2>To Do List
+                                        <small>Sample tasks</small>
+                                    </h2>
+                                    <ul class="nav navbar-right panel_toolbox">
+                                        <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                                         </li>
-                                        <li>
-                                            <p>
-                                                <input type="checkbox" class="flat"> Create email address for new intern
-                                            </p>
+                                        <li class="dropdown">
+                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                               aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                                            <ul class="dropdown-menu" role="menu">
+                                                <li><a href="#">Settings 1</a>
+                                                </li>
+                                                <li><a href="#">Settings 2</a>
+                                                </li>
+                                            </ul>
                                         </li>
-                                        <li>
-                                            <p>
-                                                <input type="checkbox" class="flat"> Have IT fix the network printer</p>
-                                        </li>
-                                        <li>
-                                            <p>
-                                                <input type="checkbox" class="flat"> Copy backups to offsite location
-                                            </p>
-                                        </li>
-                                        <li>
-                                            <p>
-                                                <input type="checkbox" class="flat"> Food truck fixie locavors mcsweeney
-                                            </p>
-                                        </li>
-                                        <li>
-                                            <p>
-                                                <input type="checkbox" class="flat"> Food truck fixie locavors mcsweeney
-                                            </p>
-                                        </li>
-                                        <li>
-                                            <p>
-                                                <input type="checkbox" class="flat"> Create email address for new intern
-                                            </p>
-                                        </li>
-                                        <li>
-                                            <p>
-                                                <input type="checkbox" class="flat"> Have IT fix the network printer</p>
-                                        </li>
-                                        <li>
-                                            <p>
-                                                <input type="checkbox" class="flat"> Copy backups to offsite location
-                                            </p>
+                                        <li><a class="close-link"><i class="fa fa-close"></i></a>
                                         </li>
                                     </ul>
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div class="x_content">
+
+                                    <div class="">
+                                        <ul class="to_do">
+                                            <li>
+                                                <p>
+                                                    <input type="checkbox" class="flat"> Schedule meeting with new
+                                                    client
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <p>
+                                                    <input type="checkbox" class="flat"> Create email address for new
+                                                    intern
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <p>
+                                                    <input type="checkbox" class="flat"> Have IT fix the network printer
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <p>
+                                                    <input type="checkbox" class="flat"> Copy backups to offsite
+                                                    location
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <p>
+                                                    <input type="checkbox" class="flat"> Food truck fixie locavors
+                                                    mcsweeney
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <p>
+                                                    <input type="checkbox" class="flat"> Food truck fixie locavors
+                                                    mcsweeney
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <p>
+                                                    <input type="checkbox" class="flat"> Create email address for new
+                                                    intern
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <p>
+                                                    <input type="checkbox" class="flat"> Have IT fix the network printer
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <p>
+                                                    <input type="checkbox" class="flat"> Copy backups to offsite
+                                                    location
+                                                </p>
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <!-- start of weather widget -->
-                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        <!-- start of weather widget -->
+                        <div class="col-md-6 col-sm-6 col-xs-12">
 
 
+                        </div>
+                        <!-- end of weather widget -->
                     </div>
-                    <!-- end of weather widget -->
                 </div>
             </div>
         </div>
+        <!-- /page content -->
+
+        <!-- footer content -->
+        <footer>
+            <div class="pull-right">
+
+            </div>
+            <div class="clearfix"></div>
+        </footer>
+        <!-- /footer content -->
     </div>
-    <!-- /page content -->
 
-    <!-- footer content -->
-    <footer>
-        <div class="pull-right">
 
+    <div class="modal fade" id="message-box-edit-liste" role="dialog">
+        <div class="modal-dialog">
+
+            <div class="modal-content">
+
+                <form class="form-horizontal" id="myForm">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Catégorie</h4>
+                    </div>
+                    <div class="modal-body">
+
+                        <div class="panel-body tab-content">
+
+                            <div class="block">
+
+                                <div class="form-group col-md-12">
+
+                                    <label class="col-md-3 control-label">Titre : </label>
+
+                                    <div class="form control col-md-6">
+
+                                        <input type="text" class="form-control" id="nomCat" name="nomcat" required/>
+                                    </div>
+                                </div>
+
+                                <div class="form-group col-md-12">
+
+                                    <label class="col-md-3 control-label">Description : </label>
+
+                                    <div class="form control col-md-6">
+
+                                        <input type="text" class="form-control" id="nomCat" name="nomcat" required/>
+                                    </div>
+                                </div>
+
+
+
+                                <div class="form-group col-md-12">
+
+                                    <label class="col-md-3  control-label">Couleur :</label>
+
+                                    <div class="col-md-6 col-xs-12"><!--class="form-control select" -->
+                                        <select data-show-icon="true" id="CouleurCat">
+
+                                            <option data-content="<i class='fa fa-bookmark-o'></i>"
+                                                    selected></option>
+                                            <option data-content="<i class='fa fa-bookmark' style=color:#e5696f ></i>"></option>
+                                            <option data-content="<i class='fa fa-bookmark' style=color:#f4985a ></i>"></option>
+                                            <option data-content="<i class='fa fa-bookmark' style=color:#ffcc53 ></i>"></option>
+                                            <option data-content="<i class='fa fa-bookmark' style=color:#fff95b ></i>"></option>
+                                            <option data-content="<i class='fa fa-bookmark' style=color:#88d27f ></i>"></option>
+                                            <option data-content="<i class='fa fa-bookmark' style=color:#7fd3b7 ></i>"></option>
+                                            <option data-content="<i class='fa fa-bookmark' style=color:#b3c38e ></i>"></option>
+                                            <option data-content="<i class='fa fa-bookmark' style=color:#779eda ></i>"></option>
+                                            <option data-content="<i class='fa fa-bookmark' style=color:#967dd2 ></i>"></option>
+                                            <option data-content="<i class='fa fa-bookmark' style=color:#c587a5 ></i>"></option>
+                                            <option data-content="<i class='fa fa-bookmark' style=color:#c7cede ></i>"></option>
+                                            <option data-content="<i class='fa fa-bookmark' style=color:#4b5978 ></i>"></option>
+                                            <option data-content="<i class='fa fa-bookmark' style=color:#a8a8a8 ></i>"></option>
+                                            <option data-content="<i class='fa fa-bookmark' style=color:#525252 ></i>"></option>
+                                            <option data-content="<i class='fa fa-bookmark' style=color:black></i>"></option>
+                                            <option data-content="<i class='fa fa-bookmark' style=color:#ab1d24></i>"></option>
+                                            <option data-content="<i class='fa fa-bookmark' style=color:#b14f0d></i>"></option>
+                                            <option data-content="<i class='fa fa-bookmark' style=color:#ab7b05></i>"></option>
+                                            <option data-content="<i class='fa fa-bookmark' style=color:#999400></i>"></option>
+                                            <option data-content="<i class='fa fa-bookmark' style=color:#35792b></i>"></option>
+                                            <option data-content="<i class='fa fa-bookmark' style=color:#2e7d64></i>"></option>
+                                            <option data-content="<i class='fa fa-bookmark' style=color:#5f6c3a></i>"></option>
+                                            <option data-content="<i class='fa fa-bookmark' style=color:#2a5191></i>"></option>
+                                            <option data-content="<i class='fa fa-bookmark' style=color:#50328f></i>"></option>
+                                            <option data-content="<i class='fa fa-bookmark' style=color:#82375f></i>"></option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="modal-footer">
+
+                        <button class="btn btn-danger" data-dismiss="modal"
+                                style="margin-left : 10px;"
+                                onclick="$('#message-box-edit-liste').modal('hide')"> <span class="fa fa-times-circle fa-right"></span>Annuler
+                        </button>
+                        <button class="btn btn-info" type="submit" onclick="saveCategorie()"><span
+                                class="fa fa-floppy-o"></span>Enregistrer
+                        </button>
+                    </div>
+
+                </form>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </footer>
-    <!-- /footer content -->
-</div>
+
 </div>
 
 <!-- jQuery -->
