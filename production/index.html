@@ -251,6 +251,10 @@
                     <button class="btn btn-default" id="delete" onclick="composer()" data-toggle="tooltip"
                             data-placement="bottom" title="Supprimer liste" style="font-size:20px;"><span
                             class="fa fa-trash"></span></button>
+					<button class="btn btn-default" id="Element_show" onclick="$('#message-box-Listes-elements').modal('show')"
+							data-toggle="tooltip"
+                            data-placement="bottom" title="Afficher element" style="font-size:20px;"><span
+                            class="fa fa-th-list"></span></button>
                 </div>
             </div>
             <!-- top tiles -->
@@ -444,13 +448,13 @@
                         </tr>
                       </thead>
                       <tbody>
-                        <tr>
-						  <td>              </td>
+                        <tr onclick="$('#message-box-Listes-elements').modal('show')">
+						  <td>azerty</td>
                           <td>
 							 <input type="checkbox" id="check-all" class="flat">
 						  </td>
-                          <td>              </td>
-						  <td>              </td>
+                          <td>zerizpeori</td>
+						  <td>lksfdlsdfkj</td>
                         </tr>
                       </tbody>
                     </table>
@@ -537,6 +541,83 @@
             </div>
         </div>
     </div>
+	
+	
+	
+	<div class="modal fade" id="message-box-Listes-elements" role="dialog">
+        <div class="modal-dialog">
+
+            <div class="modal-content">
+			<div class="modal-header">
+
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Élements de la liste</h4>
+                    
+			<div class="modal-body">
+			     <div class="col-md-12 col-sm-12 col-xs-12">
+					<div class="x_panel">
+
+                  <div class="x_content">
+
+                    <div class="table-responsive">
+                      <table class="table table-striped jambo_table bulk_action">
+                        <thead>
+                          <tr >
+							<th class="column-title">Numéro </th>
+                            <th class="column-title">Titre </th>
+                            <th class="column-title">Description </th>
+                            <th class="column-title">Date création </th>
+                            <th class="column-title">Date modification</th>
+                            <th class="column-title">Status </th>
+                            </th>
+                          </tr>
+                        </thead>
+
+                        <tbody>
+                          <tr class="even pointer" >
+                            <td class=" ">121000040</td>
+                            <td class=" ">May 23, 2014 11:47:56 PM </td>
+                            <td class=" ">121000210 <i class="success fa fa-long-arrow-up"></i></td>
+                            <td class=" ">John Blank L</td>
+                            <td class=" ">Paid</td>
+                            <td class="a-right a-right ">$7.45</td>
+                            </td>
+                          </tr>
+                          <tr class="odd pointer">
+                            <td class=" ">121000039</td>
+                            <td class=" ">May 23, 2014 11:30:12 PM</td>
+                            <td class=" ">121000208 <i class="success fa fa-long-arrow-up"></i>
+                            </td>
+                            <td class=" ">John Blank L</td>
+                            <td class=" ">Paid</td>
+                            <td class="a-right a-right ">$741.20</td>
+                            </td>
+                          </tr>
+                          <tr class="even pointer">
+                            <td class=" ">121000038</td>
+                            <td class=" ">May 24, 2014 10:55:33 PM</td>
+                            <td class=" ">121000203 <i class="success fa fa-long-arrow-up"></i>
+                            </td>
+                            <td class=" ">Mike Smith</td>
+                            <td class=" ">Paid</td>
+                            <td class="a-right a-right ">$432.26</td>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+							
+						
+                  </div>
+                </div>
+              </div>
+			  </div>
+			 </div>
+            </div>
+        </div>
+    </div>
+	
+	
 </div>
 
 <script type="text/javascript">
