@@ -21,7 +21,7 @@ function addMembres() {
 }
 
 
-  function addRow() {
+function addRow() {
      var table = document.getElementById("table"),
                 newRow = table.insertRow(table.length),
                 cel1 = newRow.insertCell(0),
@@ -31,13 +31,10 @@ function addMembres() {
                 titList = document.getElementById("titList").value,
                 descList = document.getElementById("descList").value,
                 typeList = document.getElementById("typeList").value;
-
-
-
+	
         cel1.innerHTML = titList;
         cel2.innerHTML = descList;
         cel3.innerHTML = typeList;
 
 	  $('#message-box-edit-list').modal('hide')
-
-    }
+}
