@@ -38,6 +38,6 @@ function addMembres() {
         cel2.innerHTML = descList;
         cel3.innerHTML = typeList;
 
-	  $('#message-box-edit-list').modal('show')
+	  $('#message-box-edit-list').modal('hide')
 
     }
