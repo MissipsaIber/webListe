@@ -28,6 +28,15 @@
 
     <!-- Custom Theme Style -->
     <link href="../build/css/custom.min.css" rel="stylesheet">
+	
+    <!-- Datatables -->
+    <link href="../vendors/datatables.net-bs/css/dataTables.bootstrap.min.css" rel="stylesheet">
+    <link href="../vendors/datatables.net-buttons-bs/css/buttons.bootstrap.min.css" rel="stylesheet">
+    <link href="../vendors/datatables.net-fixedheader-bs/css/fixedHeader.bootstrap.min.css" rel="stylesheet">
+    <link href="../vendors/datatables.net-responsive-bs/css/responsive.bootstrap.min.css" rel="stylesheet">
+    <link href="../vendors/datatables.net-scroller-bs/css/scroller.bootstrap.min.css" rel="stylesheet">
+
+	
 </head>
 
 <body class="nav-md">
@@ -242,122 +251,211 @@
                     <button class="btn btn-default" id="delete" onclick="composer()" data-toggle="tooltip"
                             data-placement="bottom" title="Supprimer liste" style="font-size:20px;"><span
                             class="fa fa-trash"></span></button>
+					<button class="btn btn-default" id="Element_show" onclick="$('#message-box-Listes-elements').modal('show')"
+							data-toggle="tooltip"
+                            data-placement="bottom" title="Afficher element" style="font-size:20px;"><span
+                            class="fa fa-th-list"></span></button>
                 </div>
             </div>
             <!-- top tiles -->
             <div class="row tile_count">
                 <div class="col-md-4 col-sm-4 col-xs-6 tile_stats_count">
-                    <span class="count_top"><i class="fa fa-tasks"></i> Nombre total de listes privées</span>
+                    <span class="count_top"><i class="fa fa-tasks"></i> Nombre total de listes public</span>
                     <div class="count green">2500</div>
-
                 </div>
                 <div class="col-md-4 col-sm-4 col-xs-6 tile_stats_count">
-                    <span class="count_top"><i class="fa fa-tasks"></i> Nombre total de listes public</span>
-                    <div class="count">123.50</div>
+                    <span class="count_top"><i class="fa fa-tasks"></i> Nombre total de listes privées</span>
+                    <div class="count">500</div>
+                </div>
+				<div class="col-md-4 col-sm-4 col-xs-6 tile_stats_count">
+                    <span class="count_top"><i class="fa fa-tasks"></i> Nombre total de listes privées partager</span>
+                    <div class="count green">1700</div>
+
                 </div>
             </div>
             <!-- /top tiles -->
             <div class="row">
-                <div class="col-md-8 col-sm-8 col-xs-12">
+                <div class="col-md-12 col-sm-12 col-xs-12">
                     <div class="row">
                         <!-- Start to do list -->
-                        <div class="col-md-6 col-sm-6 col-xs-12">
+                        <div class="col-md-4 col-sm-4 col-xs-12">
                             <div class="x_panel">
-                                <div class="x_title">
-                                    <h2>To Do List
-                                        <small>Sample tasks</small>
-                                    </h2>
-                                    <ul class="nav navbar-right panel_toolbox">
-                                        <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-                                        </li>
-                                        <li class="dropdown">
-                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
-                                               aria-expanded="false"><i class="fa fa-wrench"></i></a>
-                                            <ul class="dropdown-menu" role="menu">
-                                                <li><a href="#">Settings 1</a>
-                                                </li>
-                                                <li><a href="#">Settings 2</a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li><a class="close-link"><i class="fa fa-close"></i></a>
-                                        </li>
-                                    </ul>
-                                    <div class="clearfix"></div>
-                                </div>
-                                <div class="x_content">
-
-                                    <div class="">
-                                        <ul class="to_do">
-                                            <li>
-                                                <p>
-                                                    <input type="checkbox" class="flat"> Schedule meeting with new
-                                                    client
-                                                </p>
-                                            </li>
-                                            <li>
-                                                <p>
-                                                    <input type="checkbox" class="flat"> Create email address for new
-                                                    intern
-                                                </p>
-                                            </li>
-                                            <li>
-                                                <p>
-                                                    <input type="checkbox" class="flat"> Have IT fix the network printer
-                                                </p>
-                                            </li>
-                                            <li>
-                                                <p>
-                                                    <input type="checkbox" class="flat"> Copy backups to offsite
-                                                    location
-                                                </p>
-                                            </li>
-                                            <li>
-                                                <p>
-                                                    <input type="checkbox" class="flat"> Food truck fixie locavors
-                                                    mcsweeney
-                                                </p>
-                                            </li>
-                                            <li>
-                                                <p>
-                                                    <input type="checkbox" class="flat"> Food truck fixie locavors
-                                                    mcsweeney
-                                                </p>
-                                            </li>
-                                            <li>
-                                                <p>
-                                                    <input type="checkbox" class="flat"> Create email address for new
-                                                    intern
-                                                </p>
-                                            </li>
-                                            <li>
-                                                <p>
-                                                    <input type="checkbox" class="flat"> Have IT fix the network printer
-                                                </p>
-                                            </li>
-                                            <li>
-                                                <p>
-                                                    <input type="checkbox" class="flat"> Copy backups to offsite
-                                                    location
-                                                </p>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
+                  <div class="x_title">
+                    <h2>Listes public</small></h2>
+                    <ul class="nav navbar-right panel_toolbox">
+                      <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                      </li>
+                      <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                        <ul class="dropdown-menu" role="menu">
+                          <li><a href="#">Settings 1</a>
+                          </li>
+                          <li><a href="#">Settings 2</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li><a class="close-link"><i class="fa fa-close"></i></a>
+                      </li>
+                    </ul>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="x_content">
+                    <p class="text-muted font-13 m-b-30">
+                    </p>
+                    <table id="datatable-checkbox" class="table table-striped table-bordered bulk_action">
+                      <thead>
+                        <tr>
+                          <th>Titre</th>
+                          <th>Description</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>              </td>
+						  <td>              </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                        </div>
+                        <!-- Start to do list -->
+                        <div class="col-md-4 col-sm-4 col-xs-12">
+                            <div class="x_panel">
+                  <div class="x_title">
+                    <h2>Listes privées</small></h2>
+                    <ul class="nav navbar-right panel_toolbox">
+                      <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                      </li>
+                      <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                        <ul class="dropdown-menu" role="menu">
+                          <li><a href="#">Settings 1</a>
+                          </li>
+                          <li><a href="#">Settings 2</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li><a class="close-link"><i class="fa fa-close"></i></a>
+                      </li>
+                    </ul>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="x_content">
+                    <p class="text-muted font-13 m-b-30">
+                    </p>
+                    <table id="datatable-checkbox" class="table table-striped table-bordered bulk_action">
+                      <thead>
+                        <tr>
+                          <th>Titre</th>
+                          <th>Description</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>              </td>
+						  <td>              </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                        </div>
+                        <!-- End to do list -->
+                        <!-- Start to do list -->
+                        <div class="col-md-4 col-sm-4 col-xs-12">
+                            <div class="x_panel">
+                  <div class="x_title">
+                    <h2>Listes privées partager</small></h2>
+                    <ul class="nav navbar-right panel_toolbox">
+                      <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                      </li>
+                      <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                        <ul class="dropdown-menu" role="menu">
+                          <li><a href="#">Settings 1</a>
+                          </li>
+                          <li><a href="#">Settings 2</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li><a class="close-link"><i class="fa fa-close"></i></a>
+                      </li>
+                    </ul>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="x_content">
+                    <p class="text-muted font-13 m-b-30">
+                    </p>
+                    <table id="datatable-checkbox" class="table table-striped table-bordered bulk_action">
+                      <thead>
+                        <tr>
+                          <th>Titre</th>
+                          <th>Description</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>              </td>
+						  <td>              </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+								
                             </div>
                         </div>
                         <!-- start of weather widget -->
                         <div class="col-md-6 col-sm-6 col-xs-12">
-
+							
 
                         </div>
                         <!-- end of weather widget -->
                     </div>
                 </div>
+				<div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="x_panel">
+                  <div class="x_title">
+                    <h2>Tout les Listes</small></h2>
+                    <ul class="nav navbar-right panel_toolbox">
+                      <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                      </li>
+                      <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                        <ul class="dropdown-menu" role="menu">
+                          <li><a href="#">Settings 1</a>
+                          </li>
+                          <li><a href="#">Settings 2</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li><a class="close-link"><i class="fa fa-close"></i></a>
+                      </li>
+                    </ul>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="x_content">
+                    <p class="text-muted font-13 m-b-30">
+                    </p>
+                    <table id="table" class="table table-striped table-bordered bulk_action">
+                        <tr>
+                          <th>Titre</th>
+                          <th>Description</th>
+						  <th>Type de la liste</th>
+                        </tr>
+
+                        <!--<tr onclick="$('#message-box-Listes-elements').modal('show')">
+                        </tr>-->
+
+                    </table>
+                  </div>
+                </div>
+              </div>
             </div>
         </div>
         <!-- /page content -->
-
+		
         <!-- footer content -->
         <footer>
             <div class="pull-right">
@@ -406,8 +504,9 @@
                                     <label class="col-md-3  control-label">Type de la liste:</label>
                                     <div class="col-md-6 col-xs-12">
                                         <select class="form-control select" id="typeList">
-                                            <option value="prive">Priv&eacute</option>
+                                            <option value="prive">Priv&eacute partag&eacute</option>
                                             <option value="public">Public</option>
+											<option value="public">Priv&eacute</option>
                                         </select>
                                     </div>
                                 </div>
@@ -448,8 +547,12 @@
                                 onclick="$('#message-box-edit-list').modal('hide')"><i
                                 class="fa fa-times-circle fa-right"></i>Annuler
                         </button>
+
                         <button class="btn btn-info" type="submit" onclick="saveList()"><i
                                 class="fa fa-floppy-o"></i>Enregistrer
+
+                        <button class="btn btn-info" type="submit" onclick="addRow()"><span
+                                class="fa fa-floppy-o"></span>Enregistrer
                         </button>
                     </div>
 
@@ -457,6 +560,110 @@
             </div>
         </div>
     </div>
+	
+	
+	
+	<div class="modal fade" id="message-box-Listes-elements" role="dialog">
+        <div class="modal-dialog">
+
+            <div class="modal-content">
+			<div class="modal-header">
+
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Élements de la liste</h4>
+                    
+			<div class="modal-body">
+			<div class="panel-heading" style="border-color: #E5E5E5; margin-top:-1px;margin-bottom:5px;"
+                 id="bar-menu">
+                <div class="row">
+                    <button class="btn btn-default" id="add" onclick="addRow(document.getElementById('tableau-elements'), document.getElementById('rowText').value);"
+                            data-toggle="tooltip"
+                            data-placement="bottom" title="Ajouter liste" style="font-size:20px;"><span
+                            class="fa fa-plus"></span></button>
+                    <button class="btn btn-default" id="modify" onclick="composer()" data-toggle="tooltip"
+                            data-placement="bottom" title="Modifier élément" style="font-size:20px;"><span
+                            class="fa fa-edit"></span></button>
+                    <button class="btn btn-default" id="delete" onclick="composer()" data-toggle="tooltip"
+                            data-placement="bottom" title="Supprimer élément" style="font-size:20px;"><span
+                            class="fa fa-trash"></span></button>
+                </div>
+            </div>
+			     <div class="col-md-12 col-sm-12 col-xs-12">
+					<div class="x_panel">
+
+                  <div class="x_content">
+
+                    <div class="table-responsive">
+                      <table class="table table-striped jambo_table bulk_action" id="tableau-elements"> 
+                        <thead>
+                          <tr >
+							<td class="a-center ">
+                              <input type="checkbox" class="flat" name="table_records">Sélectioner
+                            </td>
+							<th class="column-title">Numéro </th>
+                            <th class="column-title">Titre </th>
+                            <th class="column-title">Description </th>
+                            <th class="column-title">Date création </th>
+                            <th class="column-title">Date modification</th>
+                            <th class="column-title">Status </th>
+                            </th>
+                          </tr>
+                        </thead>
+
+                        <tbody>
+                          <tr class="even pointer" >
+						    <td class="a-center ">
+                              <input type="checkbox" class="flat" name="table_records">
+                            </td>
+                            <td class=" ">121000040</td>
+                            <td class=" ">May 23, 2014 11:47:56 PM </td>
+                            <td class=" ">121000210 <i class="success fa fa-long-arrow-up"></i></td>
+                            <td class=" ">John Blank L</td>
+                            <td class=" ">Paid</td>
+                            <td class="a-right a-right ">$7.45</td>
+                            </td>
+                          </tr>
+                          <tr class="odd pointer">
+						    <td class="a-center ">
+                              <input type="checkbox" class="flat" name="table_records">
+                            </td>
+                            <td class=" ">121000039</td>
+                            <td class=" ">May 23, 2014 11:30:12 PM</td>
+                            <td class=" ">121000208 <i class="success fa fa-long-arrow-up"></i>
+                            </td>
+                            <td class=" ">John Blank L</td>
+                            <td class=" ">Paid</td>
+                            <td class="a-right a-right ">$741.20</td>
+                            </td>
+                          </tr>
+                          <tr class="even pointer">
+						   <td class="a-center ">
+                              <input type="checkbox" class="flat" name="table_records">
+                            </td>
+                            <td class=" ">121000038</td>
+                            <td class=" ">May 24, 2014 10:55:33 PM</td>
+                            <td class=" ">121000203 <i class="success fa fa-long-arrow-up"></i>
+                            </td>
+                            <td class=" ">Mike Smith</td>
+                            <td class=" ">Paid</td>
+                            <td class="a-right a-right ">$432.26</td>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+							
+						
+                  </div>
+                </div>
+              </div>
+			  </div>
+			 </div>
+            </div>
+        </div>
+    </div>
+	
+	
 </div>
 
 <script type="text/javascript">
@@ -472,6 +679,23 @@
             }
         });
     });
+	
+	function addRow()
+	{
+    var table = document.getElementById("table"),
+		newRow = table.insertRow(table.length),
+		cel1 = newRow.insertCell(0),
+		cel2 = newRow.insertCell(1),
+		cel3 = newRow.insertCell(2),
+		titList = document.getElementById("titList").value,
+		descList = document.getElementById("descList").value,
+		typeList = document.getElementById("typeList").value;
+		
+		cel1.innerHTML = titList;
+		cel2.innerHTML = descList;
+		cel3.innerHTML = typeList;
+    }
+
 </script>
 
 
