@@ -55,7 +55,7 @@ function selectedRowToInput(){
 			document.getElementById("titListModif").value=this.cells[0].innerHTML;
 			document.getElementById("descListModif").value=this.cells[1].innerHTML;
 			document.getElementById("typeListModif").value=this.cells[2].innerHTML;
-			$('#message-box-maj-list').modal('show');
+			//$('#message-box-maj-list').modal('show');
 		}
 	}
 }
@@ -70,4 +70,9 @@ function majHtmlTableSelectRow(){
 		table.rows[rIndex].cells[1].innerHTML = descListModif;
 		table.rows[rIndex].cells[2].innerHTML = typeListModif;
 	
+}
+
+function delSelectedRow()
+{
+	table.deleteRow(rIndex);
 }
