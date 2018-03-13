@@ -39,31 +39,18 @@
         <div class="col-md-3 left_col">
             <div class="left_col scroll-view">
                 <div class="navbar nav_title" style="border: 0;">
-                    <a href="index.html" class="site_title"><i class="fa fa-th-list"></i>
-                        <span>Gestion des listes</span></a>
+                    <a href="contacts.html" class="site_title"><i class="fa fa-th-list"></i>
+                        <span>Gestion des utilisateurs</span></a>
                 </div>
                 <div class="clearfix"></div>
-                <!-- /menu profile quick info -->
-                <br/>
-                <!-- sidebar menu -->
                 <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
                     <div class="menu_section">
                         <h3>General</h3>
                         <ul class="nav side-menu">
-                            <li><a><i class="fa fa-home"></i> Gestion des utilisteur <span class="fa fa-chevron-down"></span></a>
+                            <li><a><i class="fa fa-users"></i> Gestion des utilisteurs <span
+                                    class="fa fa-chevron-down"></span></a>
                                 <ul class="nav child_menu">
-                                    <li><a href="contacts.html">Liste des utilisteur</a></li>
-                                </ul>
-                            </li>
-                            <li><a><i class="fa fa-edit"></i> Forms <span class="fa fa-chevron-down"></span></a>
-                                <ul class="nav child_menu">
-                                    <li><a href="form.html">General Form</a></li>
-                                </ul>
-                            </li>
-                            <li><a><i class="fa fa-table"></i> Tables <span class="fa fa-chevron-down"></span></a>
-                                <ul class="nav child_menu">
-                                    <li><a href="tables.html">Tables</a></li>
-                                    <li><a href="tables_dynamic.html">Table Dynamic</a></li>
+                                    <li><a href="contacts.html">Liste des utilisteurs</a></li>
                                 </ul>
                             </li>
                         </ul>
@@ -89,7 +76,6 @@
                 <!-- /menu footer buttons -->
             </div>
         </div>
-
         <!-- top navigation -->
         <div class="top_nav">
             <div class="nav_menu">
@@ -102,7 +88,7 @@
                         <li class="">
                             <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown"
                                aria-expanded="false">
-                                <img src="images/img.jpg" alt="">Tozz ben Tezz
+                                <img src="images/img.jpg" alt="">Administrateur
                                 <span class=" fa fa-angle-down"></span>
                             </a>
                             <ul class="dropdown-menu dropdown-usermenu pull-right">
@@ -117,72 +103,6 @@
                                 <li><a href="login.html"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
                             </ul>
                         </li>
-
-                        <li role="presentation" class="dropdown">
-                            <a href="javascript:;" class="dropdown-toggle info-number" data-toggle="dropdown"
-                               aria-expanded="false">
-                                <i class="fa fa-envelope-o"></i>
-                                <span class="badge bg-green">6</span>
-                            </a>
-                            <ul id="menu1" class="dropdown-menu list-unstyled msg_list" role="menu">
-                                <li>
-                                    <a>
-                                        <span class="image"><img src="images/img.jpg" alt="Profile Image"/></span>
-                        <span>
-                          <span>John Smith</span>
-                          <span class="time">3 mins ago</span>
-                        </span>
-                        <span class="message">
-                          Film festivals used to be do-or-die moments for movie makers. They were where...
-                        </span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a>
-                                        <span class="image"><img src="images/img.jpg" alt="Profile Image"/></span>
-                        <span>
-                          <span>John Smith</span>
-                          <span class="time">3 mins ago</span>
-                        </span>
-                        <span class="message">
-                          Film festivals used to be do-or-die moments for movie makers. They were where...
-                        </span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a>
-                                        <span class="image"><img src="images/img.jpg" alt="Profile Image"/></span>
-                        <span>
-                          <span>John Smith</span>
-                          <span class="time">3 mins ago</span>
-                        </span>
-                        <span class="message">
-                          Film festivals used to be do-or-die moments for movie makers. They were where...
-                        </span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a>
-                                        <span class="image"><img src="images/img.jpg" alt="Profile Image"/></span>
-                        <span>
-                          <span>John Smith</span>
-                          <span class="time">3 mins ago</span>
-                        </span>
-                        <span class="message">
-                          Film festivals used to be do-or-die moments for movie makers. They were where...
-                        </span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <div class="text-center">
-                                        <a>
-                                            <strong>See All Alerts</strong>
-                                            <i class="fa fa-angle-right"></i>
-                                        </a>
-                                    </div>
-                                </li>
-                            </ul>
-                        </li>
                     </ul>
                 </nav>
             </div>
@@ -190,211 +110,26 @@
 
         <!-- page content -->
         <div class="right_col" role="main">
-            <div class="panel-heading" style="border-color: #E5E5E5; margin-top:-1px;margin-bottom:5px;"
-                 id="bar-menu">
-                <div class="row">
-                    <button class="btn btn-default" id="add" onclick="$('#message-box-edit-list').modal('show')"
-                            data-toggle="tooltip"
-                            data-placement="bottom" title="Ajouter liste" style="font-size:20px;"><span
-                            class="fa fa-plus"></span></button>
-                    <button class="btn btn-default" id="modify" onclick="composer()" data-toggle="tooltip"
-                            data-placement="bottom" title="Modifier liste" style="font-size:20px;"><span
-                            class="fa fa-edit"></span></button>
-                    <button class="btn btn-default" id="delete" onclick="composer()" data-toggle="tooltip"
-                            data-placement="bottom" title="Supprimer liste" style="font-size:20px;"><span
-                            class="fa fa-trash"></span></button>
-                </div>
-            </div>
-            <!-- top tiles -->
-            <div class="row tile_count">
-                <div class="col-md-4 col-sm-4 col-xs-6 tile_stats_count">
-                    <span class="count_top"><i class="fa fa-tasks"></i> Nombre total de listes privées</span>
-                    <div class="count green">2500</div>
-
-                </div>
-                <div class="col-md-4 col-sm-4 col-xs-6 tile_stats_count">
-                    <span class="count_top"><i class="fa fa-tasks"></i> Nombre total de listes public</span>
-                    <div class="count">123.50</div>
-                </div>
-            </div>
-            <!-- /top tiles -->
+        <div class="panel-heading" style="border-color: #E5E5E5; margin-top:-1px;margin-bottom:5px;"
+             id="bar-menu">
             <div class="row">
-                <div class="col-md-8 col-sm-8 col-xs-12">
-                    <div class="row">
-                        <!-- Start to do list -->
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                            <div class="x_panel">
-                                <div class="x_title">
-                                    <h2>To Do List
-                                        <small>Sample tasks</small>
-                                    </h2>
-                                    <ul class="nav navbar-right panel_toolbox">
-                                        <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-                                        </li>
-                                        <li class="dropdown">
-                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
-                                               aria-expanded="false"><i class="fa fa-wrench"></i></a>
-                                            <ul class="dropdown-menu" role="menu">
-                                                <li><a href="#">Settings 1</a>
-                                                </li>
-                                                <li><a href="#">Settings 2</a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li><a class="close-link"><i class="fa fa-close"></i></a>
-                                        </li>
-                                    </ul>
-                                    <div class="clearfix"></div>
-                                </div>
-                                <div class="x_content">
-
-                                    <div class="">
-                                        <ul class="to_do">
-                                            <li>
-                                                <p>
-                                                    <input type="checkbox" class="flat"> Schedule meeting with new
-                                                    client
-                                                </p>
-                                            </li>
-                                            <li>
-                                                <p>
-                                                    <input type="checkbox" class="flat"> Create email address for new
-                                                    intern
-                                                </p>
-                                            </li>
-                                            <li>
-                                                <p>
-                                                    <input type="checkbox" class="flat"> Have IT fix the network printer
-                                                </p>
-                                            </li>
-                                            <li>
-                                                <p>
-                                                    <input type="checkbox" class="flat"> Copy backups to offsite
-                                                    location
-                                                </p>
-                                            </li>
-                                            <li>
-                                                <p>
-                                                    <input type="checkbox" class="flat"> Food truck fixie locavors
-                                                    mcsweeney
-                                                </p>
-                                            </li>
-                                            <li>
-                                                <p>
-                                                    <input type="checkbox" class="flat"> Food truck fixie locavors
-                                                    mcsweeney
-                                                </p>
-                                            </li>
-                                            <li>
-                                                <p>
-                                                    <input type="checkbox" class="flat"> Create email address for new
-                                                    intern
-                                                </p>
-                                            </li>
-                                            <li>
-                                                <p>
-                                                    <input type="checkbox" class="flat"> Have IT fix the network printer
-                                                </p>
-                                            </li>
-                                            <li>
-                                                <p>
-                                                    <input type="checkbox" class="flat"> Copy backups to offsite
-                                                    location
-                                                </p>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- start of weather widget -->
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-
-
-                        </div>
-                        <!-- end of weather widget -->
-                    </div>
-                </div>
+                <button class="btn btn-default" id="addUser" onclick="$('#message-box-edit-user').modal('show')"
+                        data-toggle="tooltip"
+                        data-placement="bottom" title="Ajouter utilistateur" style="font-size:20px;"><span
+                        class="fa fa-plus"></span></button>
+                <button class="btn btn-default" id="modifyUser" onclick="composer()" data-toggle="tooltip"
+                        data-placement="bottom" title="Modifier utilisateur" style="font-size:20px;"><span
+                        class="fa fa-edit"></span></button>
+                <button class="btn btn-default" id="deleteUser" onclick="composer()" data-toggle="tooltip"
+                        data-placement="bottom" title="Supprimer utilisateur" style="font-size:20px;"><span
+                        class="fa fa-trash"></span></button>
             </div>
         </div>
+    </div>
         <!-- /page content -->
-
-        <!-- footer content -->
-        <footer>
-            <div class="pull-right">
-
-            </div>
-            <div class="clearfix"></div>
-        </footer>
-        <!-- /footer content -->
     </div>
 
-    <div class="modal fade" id="message-box-edit-list" role="dialog">
-        <div class="modal-dialog">
 
-            <div class="modal-content">
-
-                <form class="form-horizontal" id="listForm">
-                    <div class="modal-header">
-
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        <h4 class="modal-title">Créer une liste</h4>
-                    </div>
-                    <div class="modal-body">
-
-                        <div class="panel-body tab-content">
-
-                            <div class="block">
-
-                                <div class="form-group col-md-12">
-
-                                    <label class="col-md-3 control-label">Titre: </label>
-
-                                    <div class="form control col-md-6">
-
-                                        <input type="text" class="form-control" id="titList" name="titList" required/>
-                                    </div>
-                                </div>
-                                <div class="form-group col-md-12">
-                                    <label class="col-md-3 control-label">Description: </label>
-                                    <div class="form control col-md-6">
-                                        <textarea name="descList" id="descList" rows="5"
-                                                  style="margin: 0px; width: 239px; height: 92px;" required></textarea>
-                                    </div>
-                                </div>
-
-                                <div class="form-group col-md-12">
-
-                                    <label class="col-md-3  control-label">Type de la liste:</label>
-
-                                    <div class="col-md-6 col-xs-12">
-                                        <select class="form-control select" id="typeList">
-                                            <option value="prive">Priv&eacute</option>
-                                            <option value="public">Public</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <div class="modal-footer">
-
-                        <button class="btn btn-danger" data-dismiss="modal"
-                                style="margin-left : 10px;"
-                                onclick="$('#message-box-edit-list').modal('hide')"><span
-                                class="fa fa-times-circle fa-right"></span>Annuler
-                        </button>
-                        <button class="btn btn-info" type="submit" onclick="saveList()"><span
-                                class="fa fa-floppy-o"></span>Enregistrer
-                        </button>
-                    </div>
-
-                </form>
-            </div>
-        </div>
-    </div>
 </div>
 
 <script type="text/javascript">

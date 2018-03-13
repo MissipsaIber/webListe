@@ -403,9 +403,7 @@
                                 </div>
 
                                 <div class="form-group col-md-12">
-
                                     <label class="col-md-3  control-label">Type de la liste:</label>
-
                                     <div class="col-md-6 col-xs-12">
                                         <select class="form-control select" id="typeList">
                                             <option value="prive">Priv&eacute</option>
@@ -413,20 +411,45 @@
                                         </select>
                                     </div>
                                 </div>
+
+                                <div class="form-group col-md-16">
+                                    <label class="col-md-3 control-label">Membres: </label>
+                                    <div class="form control col-md-3">
+                                        <input type="text" class="form-control" id="membres" name="membres"/>
+                                    </div>
+
+                                    <div class="form-group col-md-6">
+                                        <label class="col-md-2  control-label">Droit:</label>
+                                        <div class="col-md-6 col-xs-12">
+                                            <select class="form-control select" id="droitMembre">
+                                                <option value="lecture" selected>Lecture</option>
+                                                <option value="ecriture">&Eacutecriture</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-2 col-xs-2">
+                                        <button class="btn btn-success btn-rounded" type="button"
+                                                onclick="addMembres()">
+                                            <i class="fa fa-plus fa-right"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="form-group col-md-12" id="divLabelMembres">
+                                </div>
                             </div>
                         </div>
 
                     </div>
 
                     <div class="modal-footer">
-
                         <button class="btn btn-danger" data-dismiss="modal"
                                 style="margin-left : 10px;"
-                                onclick="$('#message-box-edit-list').modal('hide')"><span
-                                class="fa fa-times-circle fa-right"></span>Annuler
+                                onclick="$('#message-box-edit-list').modal('hide')"><i
+                                class="fa fa-times-circle fa-right"></i>Annuler
                         </button>
-                        <button class="btn btn-info" type="submit" onclick="saveList()"><span
-                                class="fa fa-floppy-o"></span>Enregistrer
+                        <button class="btn btn-info" type="submit" onclick="saveList()"><i
+                                class="fa fa-floppy-o"></i>Enregistrer
                         </button>
                     </div>
 
@@ -450,6 +473,9 @@
         });
     });
 </script>
+
+
+<script src="../production/js/listeSettings.js"></script>
 
 <!-- jQuery -->
 <script src="../vendors/jquery/dist/jquery.min.js"></script>
