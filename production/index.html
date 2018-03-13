@@ -246,7 +246,8 @@
                             data-toggle="tooltip"
                             data-placement="bottom" title="Ajouter liste" style="font-size:20px;"><span
                             class="fa fa-plus"></span></button>
-                    <button class="btn btn-default" id="editList" onclick="composer()" data-toggle="tooltip"
+                    <button class="btn btn-default" id="editList" onclick="$('#message-box-maj-list').modal('show')"
+							data-toggle="tooltip"
                             data-placement="bottom" title="Modifier liste" style="font-size:20px;"><span
                             class="fa fa-edit"></span></button>
                     <button class="btn btn-default" id="deleteList" onclick="composer()" data-toggle="tooltip"
@@ -497,6 +498,84 @@
 
                     <button class="btn btn-info"  onclick="addRow()"><span
                             class="fa fa-floppy-o"></span>Enregistrer
+                    </button>
+                </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="message-box-maj-list" role="dialog">
+	<div class="modal-dialog">
+        <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Modifier une liste</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="panel-body tab-content">
+                        <div class="block">
+                            <div class="form-group col-md-12">
+                                <label class="col-md-3 control-label">Titre: </label>
+                                <div class="form control col-md-6">
+                                    <input type="text" class="form-control" id="titListModif" name="titList" required/>
+                                </div>
+                            </div>
+                            <div class="form-group col-md-12">
+                                <label class="col-md-3 control-label">Description: </label>
+                                <div class="form control col-md-6">
+                                        <textarea name="descList" id="descListModif" rows="5"
+                                                  style="margin: 0px; width: 239px; height: 92px;" required></textarea>
+                                </div>
+                            </div>
+                            <div class="form-group col-md-12">
+                                <label class="col-md-3  control-label">Type de la liste:</label>
+                                <div class="col-md-6 col-xs-12">
+                                    <select class="form-control select" id="typeListModif">
+                                        <option value="prive">Priv&eacute </option>
+                                        <option value="partager">Priv&eacute partag&eacute </option>
+                                        <option value="public">Public</option>
+
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group col-md-16">
+                                <label class="col-md-3 control-label">Membres: </label>
+                                <div class="form control col-md-3">
+                                    <input type="text" class="form-control" id="membresModif" name="membres"/>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label class="col-md-2  control-label">Droit:</label>
+                                    <div class="col-md-6 col-xs-12">
+                                        <select class="form-control select" id="droitMembre">
+                                            <option value="lecture" selected>Lecture</option>
+                                            <option value="ecriture">&Eacutecriture</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 col-xs-2">
+                                    <button class="btn btn-success btn-rounded" type="button"
+                                            onclick="addMembres()">
+                                        <i class="fa fa-plus fa-right"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="form-group col-md-12" id="divLabelMembres">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-danger" data-dismiss="modal"
+                            style="margin-left : 10px;"
+                            onclick="$('#message-box-edit-list').modal('hide')"><i
+                            class="fa fa-times-circle fa-right"></i>Annuler
+                    </button>
+                    <!--<button class="btn btn-info" type="submit" onclick="saveList()"><i
+                            class="fa fa-floppy-o"></i>Enregistrer-->
+
+                    <button class="btn btn-info"  onclick="majHtmlTableSelectRow()"><span
+                            class="fa fa-edit"></span>Modifier
                     </button>
                 </div>
 
