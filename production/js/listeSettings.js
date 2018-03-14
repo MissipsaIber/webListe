@@ -1,6 +1,7 @@
 
 
 var table=document.getElementById("table");
+var tableau-elements=document.getElementById("tableau-elements");
 var rIndex;
 
 function addMembres() {
@@ -47,6 +48,35 @@ function addRow() {
         typeList="";
 		
 }
+
+function addRowElement()
+{
+     var 		newRow = tableau-elements.insertRow(tableau-elements.length),
+                cel1 = newRow.insertCell(0),
+                cel2 = newRow.insertCell(1),
+                cel3 = newRow.insertCell(2),
+				cel4 = newRow.insertCell(3),
+				cel5 = newRow.insertCell(4),
+				
+                titElement = document.getElementById("titElement").value,
+                descElement = document.getElementById("descElement").value,
+				date-creation = document.getElementById("date-creation").value,
+				date-modification = document.getElementById("date-modification").value,
+				//date-modification = document.write(Date()),
+				descElement = document.getElementById("descElement").value;
+                
+	
+        cel1.innerHTML = titElement;
+        cel2.innerHTML = descElement;
+        cel3.innerHTML = date-creation;
+		cel4.innerHTML = date-modification;
+		cel5.innerHTML = descElement;
+		print("tzzzzzzz");
+	  //$('#message-box-edit-list').modal('hide');
+	  
+		//selectedRowToInputElement();
+		
+}
 function selectedRowToInput(){
 	
 	//var rIndex;
@@ -62,6 +92,24 @@ function selectedRowToInput(){
 		}
 	}
 }
+
+/*function selectedRowToInputElement(){
+	
+	//var rIndex;
+	for (var i=0; i<tableau-elements.rows.length; i++){
+		tableau-elements.rows[i].onclick=function(){
+			
+			rIndex = this.rowIndex;
+			console.log(rIndex);
+			document.getElementById("titListModif").value=this.cells[0].innerHTML;
+			document.getElementById("descListModif").value=this.cells[1].innerHTML;
+			document.getElementById("typeListModif").value=this.cells[2].innerHTML;
+			document.getElementById("descListModif").value=this.cells[1].innerHTML;
+			document.getElementById("typeListModif").value=this.cells[2].innerHTML;
+			//$('#message-box-maj-list').modal('show');
+		}
+	}
+}*/
 
 function majHtmlTableSelectRow(){
 	
