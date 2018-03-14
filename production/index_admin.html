@@ -110,42 +110,26 @@
 
         <!-- page content -->
         <div class="right_col" role="main">
-        <div class="panel-heading" style="border-color: #E5E5E5; margin-top:-1px;margin-bottom:5px;"
-             id="bar-menu">
-            <div class="row">
-                <button class="btn btn-default" id="addUser" onclick="$('#message-box-edit-user').modal('show')"
-                        data-toggle="tooltip"
-                        data-placement="bottom" title="Ajouter utilistateur" style="font-size:20px;"><span
-                        class="fa fa-plus"></span></button>
-                <button class="btn btn-default" id="modifyUser" onclick="composer()" data-toggle="tooltip"
-                        data-placement="bottom" title="Modifier utilisateur" style="font-size:20px;"><span
-                        class="fa fa-edit"></span></button>
-                <button class="btn btn-default" id="deleteUser" onclick="composer()" data-toggle="tooltip"
-                        data-placement="bottom" title="Supprimer utilisateur" style="font-size:20px;"><span
-                        class="fa fa-trash"></span></button>
+            <div class="panel-heading" style="border-color: #E5E5E5; margin-top:-1px;margin-bottom:5px;"
+                 id="bar-menu">
+                <div class="row">
+                    <button class="btn btn-default" id="addUser" onclick="$('#message-box-edit-user').modal('show')"
+                            data-toggle="tooltip"
+                            data-placement="bottom" title="Ajouter utilistateur" style="font-size:20px;"><span
+                            class="fa fa-plus"></span></button>
+                    <button class="btn btn-default" id="modifyUser" onclick="composer()" data-toggle="tooltip"
+                            data-placement="bottom" title="Modifier utilisateur" style="font-size:20px;"><span
+                            class="fa fa-edit"></span></button>
+                    <button class="btn btn-default" id="deleteUser" onclick="composer()" data-toggle="tooltip"
+                            data-placement="bottom" title="Supprimer utilisateur" style="font-size:20px;"><span
+                            class="fa fa-trash"></span></button>
+                </div>
             </div>
         </div>
-    </div>
         <!-- /page content -->
     </div>
-
-
 </div>
 
-<script type="text/javascript">
-    $().ready(function () {
-        $('#listForm').validate({
-            rules: {
-                titList: {
-                    required: true
-                },
-            },
-            messages: {
-                titList: "Veuillez saisir un titre pour votre liste",
-            }
-        });
-    });
-</script>
 
 <!-- jQuery -->
 <script src="../vendors/jquery/dist/jquery.min.js"></script>
@@ -184,7 +168,6 @@
 <!-- bootstrap-daterangepicker -->
 <script src="../vendors/moment/min/moment.min.js"></script>
 <script src="../vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
-
 <!-- Custom Theme Scripts -->
 <script src="../build/js/custom.min.js"></script>
 </body>
