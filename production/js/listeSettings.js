@@ -41,9 +41,12 @@ function addRow() {
 
 	  //$('#message-box-edit-list').modal('hide');
 	  
-	  selectedRowToInput();
+		selectedRowToInput();
+		titList="";
+        descList="";
+        typeList="";
+		
 }
-
 function selectedRowToInput(){
 	
 	//var rIndex;
