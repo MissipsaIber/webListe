@@ -41,7 +41,9 @@
                                     class="fa fa-chevron-down"></span></a>
                                 <ul class="nav child_menu">
                                     <li><a href="contacts.html">Liste des utilisateurs</a></li>
+                                    <li><a href="ajouter_utilisateur.html">Ajouter utilisateur</a></li>
                                 </ul>
+
                             </li>
                         </ul>
                     </div>
@@ -74,90 +76,23 @@
                     <div class="nav toggle">
                         <a id="menu_toggle"><i class="fa fa-bars"></i></a>
                     </div>
-
                     <ul class="nav navbar-nav navbar-right">
                         <li class="">
                             <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown"
                                aria-expanded="false">
-                                <img src="images/img.jpg" alt="">John Doe
+                                <img src="images/img.jpg" alt="">Administrateur
                                 <span class=" fa fa-angle-down"></span>
                             </a>
                             <ul class="dropdown-menu dropdown-usermenu pull-right">
-                                <li><a href="javascript:;"> Profile</a></li>
+                                <li><a href="javascript:;"> Profil</a></li>
                                 <li>
                                     <a href="javascript:;">
                                         <span class="badge bg-red pull-right">50%</span>
-                                        <span>Settings</span>
+                                        <span>Réglage</span>
                                     </a>
                                 </li>
-                                <li><a href="javascript:;">Help</a></li>
-                                <li><a href="login.html"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
-                            </ul>
-                        </li>
-
-                        <li role="presentation" class="dropdown">
-                            <a href="javascript:;" class="dropdown-toggle info-number" data-toggle="dropdown"
-                               aria-expanded="false">
-                                <i class="fa fa-envelope-o"></i>
-                                <span class="badge bg-green">6</span>
-                            </a>
-                            <ul id="menu1" class="dropdown-menu list-unstyled msg_list" role="menu">
-                                <li>
-                                    <a>
-                                        <span class="image"><img src="images/img.jpg" alt="Profile Image"/></span>
-                        <span>
-                          <span>John Smith</span>
-                          <span class="time">3 mins ago</span>
-                        </span>
-                        <span class="message">
-                          Film festivals used to be do-or-die moments for movie makers. They were where...
-                        </span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a>
-                                        <span class="image"><img src="images/img.jpg" alt="Profile Image"/></span>
-                        <span>
-                          <span>John Smith</span>
-                          <span class="time">3 mins ago</span>
-                        </span>
-                        <span class="message">
-                          Film festivals used to be do-or-die moments for movie makers. They were where...
-                        </span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a>
-                                        <span class="image"><img src="images/img.jpg" alt="Profile Image"/></span>
-                        <span>
-                          <span>John Smith</span>
-                          <span class="time">3 mins ago</span>
-                        </span>
-                        <span class="message">
-                          Film festivals used to be do-or-die moments for movie makers. They were where...
-                        </span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a>
-                                        <span class="image"><img src="images/img.jpg" alt="Profile Image"/></span>
-                        <span>
-                          <span>John Smith</span>
-                          <span class="time">3 mins ago</span>
-                        </span>
-                        <span class="message">
-                          Film festivals used to be do-or-die moments for movie makers. They were where...
-                        </span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <div class="text-center">
-                                        <a>
-                                            <strong>See All Alerts</strong>
-                                            <i class="fa fa-angle-right"></i>
-                                        </a>
-                                    </div>
-                                </li>
+                                <li><a href="javascript:;">Aide</a></li>
+                                <li><a href="login.html"><i class="fa fa-sign-out pull-right"></i> Déconnexion</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -195,16 +130,13 @@
                                         <div class="title_right">
 
 
-
                                             <button class="btn btn-default" id="addUser"
-                                                    onclick="$('#message-box-edit-user').modal('show')"
-                                                    data-toggle="tooltip"
+                                                    data-toggle="modal" data-target="#message-box-edit-user"
                                                     data-placement="bottom" title="Ajouter utilistateur"
                                                     style="font-size:20px;"><span
                                                     class="fa fa-plus"></span></button>
                                             <button class="btn btn-info" id="modifyUser"
-                                                    onclick="$('#message-box-edit-user').modal('show')"
-                                                    data-toggle="tooltip"
+                                                    data-toggle="modal" data-target="#message-box-edit-user"
                                                     data-placement="bottom" title="Modifier utilisateur"
                                                     style="font-size:20px;"><span
                                                     class="fa fa-edit"></span></button>
@@ -305,7 +237,9 @@
                                             <div class="col-xs-12 bottom text-left">
                                                 <div class="col-xs-12 col-sm-6 emphasis">
 
-                                                    <input type="checkbox" checked data-toggle="toggle" data-onstyle="warning" data-size="mini" name="userSelected" id="userSelected" value=""/>
+                                                    <input type="checkbox" checked data-toggle="toggle"
+                                                           data-onstyle="warning" data-size="mini" name="userSelected"
+                                                           id="userSelected" value=""/>
 
                                                     <button type="button" class="btn btn-primary btn-xs"
                                                             onclick="$('#message-box-edit-user').modal('show')">
@@ -335,7 +269,7 @@
                                             <div class="col-xs-12 bottom text-center">
                                                 <div class="col-xs-12 col-sm-6 emphasis">
                                                     <button type="button" class="btn btn-primary btn-xs"
-                                                            onclick="$('#message-box-edit-user').modal('show')">
+                                                            data-toggle="modal" data-target="#message-box-edit-user">
                                                         <i class="fa fa-user"> </i> Voir profil
                                                     </button>
                                                 </div>
@@ -414,10 +348,11 @@
         <!-- /footer content -->
     </div>
 
-    <div class="modal fade" id="message-box-edit-user" role="dialog">
-        <div class="modal-dialog">
+    <div class="modal fade" id="message-box-edit-user" tabindex="-1" style="left: 10%; width: 80%; margin-left: 0px;"
+         role="dialog">
+        <div class="modal-dialog modal-lg">
             <div class="modal-content">
-                <form class="form-horizontal" id="listForm">
+                <form class="form-horizontal" id="userForm">
                     <div class="modal-header">
 
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
@@ -427,6 +362,12 @@
                     <div class="modal-body">
                         <div class="panel-body tab-content">
                             <div class="block">
+                                <div class="form-group col-md-12">
+                                    <label class="col-md-4 control-label">Pseudo: </label>
+                                    <div class="form control col-md-6">
+                                        <input type="text" class="form-control" id="pseudoUser" name="pseudoUser"/>
+                                    </div>
+                                </div>
                                 <div class="form-group col-md-12">
                                     <label class="col-md-4 control-label">Nom: </label>
                                     <div class="form control col-md-6">
@@ -443,10 +384,35 @@
 
                                 <div class="form-group col-md-12">
                                     <label class="col-md-4 control-label">Date de naissance: </label>
-                                    <div class="form control col-md-6">
-                                        <input type="text" class="form-control" id="dateBirth" name="dateBirth"/>
+                                    <!--<div class="form control col-md-6">-->
+                                    <!--<input type="date" data-date-format="mm/dd/yyyy" value="01/01/1990"-->
+                                    <!--class="form-control" id="dateBirth" name="dateBirth"/>-->
+                                    <!--<div class="input-group-addon">-->
+                                    <!--<span class="glyphicon glyphicon-th"></span>-->
+                                    <!--</div>-->
+                                    <!--</div>-->
+
+
+                                    <div class="form-group col-md-6">
+                                        <div class='input-group date' id='datetimepicker1'>
+                                            <input type='text' data-format="dd/MM/yyyy" class="form-control"/>
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+                                        </div>
                                     </div>
                                 </div>
+                                <script type="text/javascript">
+                                    $(function () {
+                                        $('#datetimepicker1').datetimepicker();
+                                    });
+                                </script>
+                                <!--<script type="text/javascript">-->
+                                <!--$(function () {-->
+                                <!--$('#dateBirth').datetimepicker();-->
+                                <!--});-->
+                                <!--</script>-->
+
 
                                 <div class="form-group col-md-12">
                                     <label class="col-md-4 control-label">Mot de passe: </label>
@@ -454,7 +420,6 @@
                                         <input type="password" class="form-control" id="password" name="password"/>
                                     </div>
                                 </div>
-
                                 <div class="form-group col-md-12">
                                     <label class="col-md-4 control-label">Confirmer le mot de passe: </label>
                                     <div class="form control col-md-6">
@@ -467,12 +432,12 @@
                     </div>
 
                     <div class="modal-footer">
-                        <button class="btn btn-danger" data-dismiss="modal"
+                        <button class="btn btn-danger"
                                 style="margin-left : 10px;"
                                 onclick="$('#message-box-edit-user').modal('hide')"><i
                                 class="fa fa-times-circle fa-right"></i> Annuler
                         </button>
-                        <button class="btn btn-info" type="submit" onclick="saveList()"><i
+                        <button class="btn btn-info" type="submit" onclick="saveUser()"><i
                                 class="fa fa-floppy-o"></i> Enregistrer
                         </button>
                     </div>
