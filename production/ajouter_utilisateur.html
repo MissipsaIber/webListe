@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Gestion des listes</title>
+
+    <!-- Bootstrap -->
+    <link href="../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../vendors/bootstrap/dist/css/bootstrap-toggle.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="../vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <!-- NProgress -->
+    <link href="../vendors/nprogress/nprogress.css" rel="stylesheet">
+
+    <!-- Custom Theme Style -->
+    <link href="../build/css/custom.min.css" rel="stylesheet">
+</head>
+
+
+<body class="nav-md">
+<div class="container body">
+    <div class="main_container">
+        <div class="col-md-3 left_col">
+            <div class="left_col scroll-view">
+                <div class="navbar nav_title" style="border: 0;">
+                    <a href="index_admin.html" class="site_title"><i class="fa fa-th-list"></i> <span> Gestion des listes</span></a>
+                </div>
+                <div class="clearfix"></div>
+                <br/>
+                <!-- sidebar menu -->
+                <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+                    <div class="menu_section">
+                        <h3>General</h3>
+                        <ul class="nav side-menu">
+                            <li><a><i class="fa fa-home"></i> Gestion des utilisateurs <span
+                                    class="fa fa-chevron-down"></span></a>
+                                <ul class="nav child_menu">
+                                    <li><a href="contacts.html">Liste des utilisateurs</a></li>
+                                    <li><a href="ajouter_utilisateur.html">Ajouter utilisateur</a></li>
+                                </ul>
+
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- /sidebar menu -->
+            </div>
+        </div>
+
+        <!-- top navigation -->
+        <div class="top_nav">
+            <div class="nav_menu">
+                <nav>
+                    <div class="nav toggle">
+                        <a id="menu_toggle"><i class="fa fa-bars"></i></a>
+                    </div>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="">
+                            <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown"
+                               aria-expanded="false">
+                                <img src="images/img.jpg" alt="">Administrateur
+                                <span class=" fa fa-angle-down"></span>
+                            </a>
+                            <ul class="dropdown-menu dropdown-usermenu pull-right">
+                                <li><a href="javascript:;"> Profil</a></li>
+                                <li>
+                                    <a href="javascript:;">
+                                        <span class="badge bg-red pull-right">50%</span>
+                                        <span>Réglage</span>
+                                    </a>
+                                </li>
+                                <li><a href="javascript:;">Aide</a></li>
+                                <li><a href="login.html"><i class="fa fa-sign-out pull-right"></i> Déconnexion</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <!-- /top navigation -->
+
+        <!-- page content -->
+        <div class="right_col" role="main">
+            <div class="">
+                <div class="page-title">
+                    <div class="title_left">
+                        <h3>Ajouter un utilisateur</h3>
+                    </div>
+                </div>
+
+                <div class="clearfix"></div>
+            </div>
+            <div class="row">
+                <div class="col-lg-10">
+                    <div class="well bs-component live-less-editor-hovercontainer"
+                         data-relatedvars="legend-color,legend-border-color,input-color,input-height-base,input-bg,input-border,input-border-radius,input-border-focus,input-color-placeholder,input-bg-disabled,input-height-small,input-height-large,state-success-text,state-success-bg,state-warning-text,state-warning-bg,state-danger-text,state-danger-bg,input-group-addon-bg,input-group-addon-border-color,input-border-radius-large,input-border-radius-small">
+                        <form class="form-horizontal">
+                        <fieldset>
+                            <legend>Informations</legend>
+
+                            <div class="form-group">
+                                <label class="col-lg-2 control-label">Pseudo </label>
+                                <div class="col-lg-8">
+                                    <input type="text" class="form-control" id="pseudoUser"
+                                           name="pseudoUser"/>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-lg-2 control-label">Nom </label>
+                                <div class="col-lg-8">
+                                    <input type="text" class="form-control" id="nomUser"
+                                           name="nomUser"/>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-lg-2 control-label">Prénom </label>
+                                <div class="col-lg-8">
+                                    <input type="text" class="form-control" id="prenUser"
+                                           name="prenUser"/>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="userEmail" class="col-lg-2 control-label">Email</label>
+                                <div class="col-lg-8">
+                                    <input type="text" class="form-control" id="userEmail" >
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="userPassword" class="col-lg-2 control-label">Mot de passe</label>
+                                <div class="col-lg-8">
+                                    <input type="password" class="form-control" id="userPassword"
+                                           placeholder="Password">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="userPassword1" class="col-lg-2 control-label">Confirmation mot de passe</label>
+                                <div class="col-lg-8">
+                                    <input type="password" class="form-control" id="userPassword1">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-lg-2 control-label">Type</label>
+                                <div class="col-lg-8">
+                                    <div class="radio">
+                                        <label>
+                                            <input type="radio" name="optionsRadios" id="optionsRadios1"
+                                                   value="radioUser" checked>
+                                            Utilisateur
+                                        </label>
+                                    </div>
+                                    <div class="radio">
+                                        <label>
+                                            <input type="radio" name="optionsRadios" id="optionsRadios2"
+                                                   value="radioAdmin">
+                                            Administrateur
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <button class="btn btn-danger"
+                        style="margin-left : 10px;"
+                        onclick=""><i
+                        class="fa fa-times-circle fa-right"></i> Annuler
+                </button>
+                <button class="btn btn-info" type="submit" onclick="saveUser()"><i
+                        class="fa fa-floppy-o"></i> Enregistrer
+                </button>
+            </div>
+        </div>
+    </div>
+    <!-- /page content -->
+
+    <!-- footer content -->
+    <footer>
+        <div class="pull-right">
+            © Université Clermont Auvergne - Gestion des listes - 2018</a>
+        </div>
+        <div class="clearfix"></div>
+    </footer>
+    <!-- /footer content -->
+</div>
+</div>
+
+<!-- jQuery -->
+<script src="../vendors/jquery/dist/jquery.min.js"></script>
+<!-- Bootstrap -->
+<script src="../vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="../vendors/bootstrap/dist/js/bootstrap-toggle.min.js"></script>
+<!-- FastClick -->
+<script src="../vendors/fastclick/lib/fastclick.js"></script>
+<!-- NProgress -->
+<script src="../vendors/nprogress/nprogress.js"></script>
+<!-- Custom Theme Scripts -->
+<script src="../build/js/custom.min.js"></script>
+</body>
+</html>

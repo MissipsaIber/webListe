@@ -26,45 +26,56 @@
 <div>
   <a class="hiddenanchor" id="signup"></a>
   <a class="hiddenanchor" id="signin"></a>
- <div class="form control col-md-8"> 
+ <div class="form control col-md-10">
+
  </div>
  
-   <div class="form control col-md-3">
+ 
+   <div class="form control col-md-2">
+   <br><br><br><br><br><br>
    <section class="login_content">
 	  
-        <form>
-          <h1>Connexion </h1>
-
-          <div class="form control col-md-6">
-            <input type="text"  class="form-control" placeholder="Username" required/>
+        <form name="vérifier cnx" method="post" action="cnx.php">
+		   <div class="form control col-md-8"> 
+          <h4>Connexion </h4>
+            </div>
+			<div class="col-md-8">
+            </span>
+          </div>
+          <div class="form control col-md-8">
+            <input type="text" name="username"  class="form-control" placeholder="Username" required/>
           </div >
-          <div class="col-md-8">
+          <div class="col-md-4">
             </span>
           </div>
 
-          <div class="form control col-md-6">
-            <input type="password" class="form-control" placeholder="Password" required="" />
+          <div class="form control col-md-8">
+            <input type="password" name="passworde" class="form-control" placeholder="Password" required="" />
           </div>
 
 
-          <div class="form control col-md-8">
-            <a class="btn btn-default submit" href="index.html">Log in</a>
+          <div class="form control col-md-10">
+            <input type ="submit" value="log in ">
             <a class="reset_pass" href="#">Besoin d'aide?</a>
 
           </div>
+		  
 
           <div class="clearfix"></div>
-
+          <div class="form control col-md-8"> 
           <div class="separator">
-            <br />
-
-            <div>
-              <h1><i class="fa fa-paw"></i> Gestion de listes</h1>
-              <p>©2018 tout les droits sont réservé. Gestion des listes </p>
-            </div>
+		  
+            
           </div>
+		  </div>
         </form>
+		
       </section>
+	  
+	<?php
+	
+
+	?>
    
    
    </div> 
