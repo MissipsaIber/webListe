@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!--TOZ-->
+    <!--TOZ-->
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <!-- Meta, title, CSS, favicons, etc. -->
     <meta charset="utf-8">
@@ -177,11 +177,11 @@
                                 <li>
                                     <a>
                                         <span class="image"><img src="images/img.jpg" alt="Profile Image"/></span>
-                        <span>
+                                        <span>
                           <span>John Smith</span>
                           <span class="time">3 mins ago</span>
                         </span>
-                        <span class="message">
+                                        <span class="message">
                           Film festivals used to be do-or-die moments for movie makers. They were where...
                         </span>
                                     </a>
@@ -189,11 +189,11 @@
                                 <li>
                                     <a>
                                         <span class="image"><img src="images/img.jpg" alt="Profile Image"/></span>
-                        <span>
+                                        <span>
                           <span>John Smith</span>
                           <span class="time">3 mins ago</span>
                         </span>
-                        <span class="message">
+                                        <span class="message">
                           Film festivals used to be do-or-die moments for movie makers. They were where...
                         </span>
                                     </a>
@@ -213,11 +213,11 @@
                                 <li>
                                     <a>
                                         <span class="image"><img src="images/img.jpg" alt="Profile Image"/></span>
-                                            <span>
+                                        <span>
                                               <span>John Smith</span>
                                               <span class="time">3 mins ago</span>
                                             </span>
-                                            <span class="message">
+                                        <span class="message">
                                               Film festivals used to be do-or-die moments for movie makers. They were where...
                                             </span>
                                     </a>
@@ -247,10 +247,10 @@
                             data-placement="bottom" title="Ajouter liste" style="font-size:20px;"><span
                             class="fa fa-plus"></span></button>
                     <button class="btn btn-default" id="editList" onclick="$('#message-box-maj-list').modal('show')"
-							data-toggle="tooltip"
+                            data-toggle="tooltip"
                             data-placement="bottom" title="Modifier liste" style="font-size:20px;"><span
                             class="fa fa-edit"></span></button>
-                    <button class="btn btn-default" id="deleteList" onclick="delSelectedRow()" data-toggle="tooltip"
+                    <button class="btn btn-default" id="deleteList" onclick="ConfirmMessageDelList()" data-toggle="tooltip"
                             data-placement="bottom" title="Supprimer liste" style="font-size:20px;"><span
                             class="fa fa-trash"></span></button>
                     <button class="btn btn-default" id="Element_show"
@@ -401,9 +401,9 @@
                         </p>
                         <table id="table" class="table table-striped table-bordered bulk_action">
                             <thead>
-                                <th>Titre</th>
-                                <th>Description</th>
-                                <th>Type de la liste</th>
+                            <th>Titre</th>
+                            <th>Description</th>
+                            <th>Type de la liste</th>
                             </thead>
 
                             <!--<tr onclick="$('#message-box-Listes-elements').modal('show')">
@@ -430,154 +430,154 @@
 <div class="modal fade" id="message-box-edit-list" role="dialog">
     <div class="modal-dialog">
         <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h4 class="modal-title">Créer une liste</h4>
-                </div>
-                <div class="modal-body">
-                    <div class="panel-body tab-content">
-                        <div class="block">
-                            <div class="form-group col-md-12">
-                                <label class="col-md-3 control-label">Titre: </label>
-                                <div class="form control col-md-6">
-                                    <input type="text" class="form-control" id="titList" name="titList" required/>
-                                </div>
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Créer une liste</h4>
+            </div>
+            <div class="modal-body">
+                <div class="panel-body tab-content">
+                    <div class="block">
+                        <div class="form-group col-md-12">
+                            <label class="col-md-3 control-label">Titre: </label>
+                            <div class="form control col-md-6">
+                                <input type="text" class="form-control" id="titList" name="titList" required/>
                             </div>
-                            <div class="form-group col-md-12">
-                                <label class="col-md-3 control-label">Description: </label>
-                                <div class="form control col-md-6">
+                        </div>
+                        <div class="form-group col-md-12">
+                            <label class="col-md-3 control-label">Description: </label>
+                            <div class="form control col-md-6">
                                         <textarea name="descList" id="descList" rows="5"
                                                   style="margin: 0px; width: 239px; height: 92px;" required></textarea>
-                                </div>
                             </div>
-                            <div class="form-group col-md-12">
-                                <label class="col-md-3  control-label">Type de la liste:</label>
-                                <div class="col-md-6 col-xs-12">
-                                    <select class="form-control select" id="typeList">
-                                        <option value="privé">Priv&eacute </option>
-                                        <option value="privé partagé">Priv&eacute Partag&eacute </option>
-                                        <option value="public">Public </option>
+                        </div>
+                        <div class="form-group col-md-12">
+                            <label class="col-md-3  control-label">Type de la liste:</label>
+                            <div class="col-md-6 col-xs-12">
+                                <select class="form-control select" id="typeList">
+                                    <option value="privé">Priv&eacute</option>
+                                    <option value="privé partagé">Priv&eacute Partag&eacute</option>
+                                    <option value="public">Public</option>
 
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group col-md-16">
+                            <label class="col-md-3 control-label">Membres: </label>
+                            <div class="form control col-md-3">
+                                <input type="text" class="form-control" id="membres" name="membres"/>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label class="col-md-2  control-label">Droit:</label>
+                                <div class="col-md-6 col-xs-12">
+                                    <select class="form-control select" id="droitMembre">
+                                        <option value="lecture" selected>Lecture</option>
+                                        <option value="ecriture">&Eacutecriture</option>
                                     </select>
                                 </div>
                             </div>
-                            <div class="form-group col-md-16">
-                                <label class="col-md-3 control-label">Membres: </label>
-                                <div class="form control col-md-3">
-                                    <input type="text" class="form-control" id="membres" name="membres"/>
-                                </div>
-                                <div class="form-group col-md-6">
-                                    <label class="col-md-2  control-label">Droit:</label>
-                                    <div class="col-md-6 col-xs-12">
-                                        <select class="form-control select" id="droitMembre">
-                                            <option value="lecture" selected>Lecture</option>
-                                            <option value="ecriture">&Eacutecriture</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="col-md-2 col-xs-2">
-                                    <button class="btn btn-success btn-rounded" type="button"
-                                            onclick="addMembres()">
-                                        <i class="fa fa-plus fa-right"></i>
-                                    </button>
-                                </div>
+                            <div class="col-md-2 col-xs-2">
+                                <button class="btn btn-success btn-rounded" type="button"
+                                        onclick="addMembres()">
+                                    <i class="fa fa-plus fa-right"></i>
+                                </button>
                             </div>
-                            <div class="form-group col-md-12" id="divLabelMembres">
-                            </div>
+                        </div>
+                        <div class="form-group col-md-12" id="divLabelMembres">
                         </div>
                     </div>
                 </div>
-                <div class="modal-footer">
-                    <button class="btn btn-danger" data-dismiss="modal"
-                            style="margin-left : 10px;"
-                            onclick="$('#message-box-edit-list').modal('hide')"><i
-                            class="fa fa-times-circle fa-right"></i>Annuler
-                    </button>
-                    <!--<button class="btn btn-info" type="submit" onclick="saveList()"><i
-                            class="fa fa-floppy-o"></i>Enregistrer-->
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-danger" data-dismiss="modal"
+                        style="margin-left : 10px;"
+                        onclick="$('#message-box-edit-list').modal('hide')"><i
+                        class="fa fa-times-circle fa-right"></i>Annuler
+                </button>
+                <!--<button class="btn btn-info" type="submit" onclick="saveList()"><i
+                        class="fa fa-floppy-o"></i>Enregistrer-->
 
-                    <button class="btn btn-info"  onclick="addRow()"><span
-                            class="fa fa-floppy-o"></span>Enregistrer
-                    </button>
-                </div>
+                <button class="btn btn-info" onclick="addRow()"><span
+                        class="fa fa-floppy-o"></span>Enregistrer
+                </button>
+            </div>
 
         </div>
     </div>
 </div>
 
 <div class="modal fade" id="message-box-maj-list" role="dialog">
-	<div class="modal-dialog">
+    <div class="modal-dialog">
         <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h4 class="modal-title">Modifier une liste</h4>
-                </div>
-                <div class="modal-body">
-                    <div class="panel-body tab-content">
-                        <div class="block">
-                            <div class="form-group col-md-12">
-                                <label class="col-md-3 control-label">Titre: </label>
-                                <div class="form control col-md-6">
-                                    <input type="text" class="form-control" id="titListModif" name="titList" required/>
-                                </div>
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Modifier une liste</h4>
+            </div>
+            <div class="modal-body">
+                <div class="panel-body tab-content">
+                    <div class="block">
+                        <div class="form-group col-md-12">
+                            <label class="col-md-3 control-label">Titre: </label>
+                            <div class="form control col-md-6">
+                                <input type="text" class="form-control" id="titListModif" name="titList" required/>
                             </div>
-                            <div class="form-group col-md-12">
-                                <label class="col-md-3 control-label">Description: </label>
-                                <div class="form control col-md-6">
+                        </div>
+                        <div class="form-group col-md-12">
+                            <label class="col-md-3 control-label">Description: </label>
+                            <div class="form control col-md-6">
                                         <textarea name="descList" id="descListModif" rows="5"
                                                   style="margin: 0px; width: 239px; height: 92px;" required></textarea>
-                                </div>
                             </div>
-                            <div class="form-group col-md-12">
-                                <label class="col-md-3  control-label">Type de la liste:</label>
-                                <div class="col-md-6 col-xs-12">
-                                    <select class="form-control select" id="typeListModif">
-                                        <option value="privé">Priv&eacute </option>
-                                        <option value="privé partagé">Priv&eacute Partag&eacute </option>
-                                        <option value="public">Public</option>
+                        </div>
+                        <div class="form-group col-md-12">
+                            <label class="col-md-3  control-label">Type de la liste:</label>
+                            <div class="col-md-6 col-xs-12">
+                                <select class="form-control select" id="typeListModif">
+                                    <option value="privé">Priv&eacute</option>
+                                    <option value="privé partagé">Priv&eacute Partag&eacute</option>
+                                    <option value="public">Public</option>
 
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group col-md-16">
+                            <label class="col-md-3 control-label">Membres: </label>
+                            <div class="form control col-md-3">
+                                <input type="text" class="form-control" id="membresModif" name="membres"/>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label class="col-md-2  control-label">Droit:</label>
+                                <div class="col-md-6 col-xs-12">
+                                    <select class="form-control select" id="droitMembre">
+                                        <option value="lecture" selected>Lecture</option>
+                                        <option value="ecriture">&Eacutecriture</option>
                                     </select>
                                 </div>
                             </div>
-                            <div class="form-group col-md-16">
-                                <label class="col-md-3 control-label">Membres: </label>
-                                <div class="form control col-md-3">
-                                    <input type="text" class="form-control" id="membresModif" name="membres"/>
-                                </div>
-                                <div class="form-group col-md-6">
-                                    <label class="col-md-2  control-label">Droit:</label>
-                                    <div class="col-md-6 col-xs-12">
-                                        <select class="form-control select" id="droitMembre">
-                                            <option value="lecture" selected>Lecture</option>
-                                            <option value="ecriture">&Eacutecriture</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="col-md-2 col-xs-2">
-                                    <button class="btn btn-success btn-rounded" type="button"
-                                            onclick="addMembres()">
-                                        <i class="fa fa-plus fa-right"></i>
-                                    </button>
-                                </div>
+                            <div class="col-md-2 col-xs-2">
+                                <button class="btn btn-success btn-rounded" type="button"
+                                        onclick="addMembres()">
+                                    <i class="fa fa-plus fa-right"></i>
+                                </button>
                             </div>
-                            <div class="form-group col-md-12" id="divLabelMembres">
-                            </div>
+                        </div>
+                        <div class="form-group col-md-12" id="divLabelMembres">
                         </div>
                     </div>
                 </div>
-                <div class="modal-footer">
-                    <button class="btn btn-danger" data-dismiss="modal"
-                            style="margin-left : 10px;"
-                            onclick="$('#message-box-edit-list').modal('hide')"><i
-                            class="fa fa-times-circle fa-right"></i>Annuler
-                    </button>
-                    <!--<button class="btn btn-info" type="submit" onclick="saveList()"><i
-                            class="fa fa-floppy-o"></i>Enregistrer-->
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-danger" data-dismiss="modal"
+                        style="margin-left : 10px;"
+                        onclick="$('#message-box-edit-list').modal('hide')"><i
+                        class="fa fa-times-circle fa-right"></i>Annuler
+                </button>
+                <!--<button class="btn btn-info" type="submit" onclick="saveList()"><i
+                        class="fa fa-floppy-o"></i>Enregistrer-->
 
-                    <button class="btn btn-info"  onclick="majHtmlTableSelectRow()"><span
-                            class="fa fa-edit"></span>Modifier
-                    </button>
-                </div>
+                <button class="btn btn-info" onclick="majHtmlTableSelectRow()"><span
+                        class="fa fa-edit"></span>Modifier
+                </button>
+            </div>
 
         </div>
     </div>
@@ -587,116 +587,70 @@
 <div class="modal fade" id="message-box-Listes-elements" role="dialog">
     <div class="modal-dialog">
         <div class="modal-content">
-                <div class="modal-header">
-				
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h4 class="modal-title">Élements de la liste</h4>
-					
-					<div class="panel-body tab-content">
-                        <div class="block">
-                            <div class="form-group col-md-12">
-                                <label class="col-md-3 control-label">Titre: </label>
-                                <div class="form control col-md-6">
-                                    <input type="text" class="form-control" id="titElement" name="titList" required/>
-                                </div>
-                            </div>
-                            <div class="form-group col-md-12">
-                                <label class="col-md-3 control-label">Description: </label>
-                                <div class="form control col-md-6">
-                                        <textarea name="descList" id="descElement" rows="5"
-                                                  style="margin: 0px; width: 239px; height: 92px;" required></textarea>
-                                </div>
-                            </div>
-                            <div class="form-group col-md-12">
-                                <label class="col-md-3  control-label">Status:</label>
-                                <div class="col-md-6 col-xs-12">
-                                    <select class="form-control select" id="statuElement">
-                                        <option value="à faire">A faire </option>
-                                        <option value="fait">Fait </option>
-                                        <option value="supprimé">Supprim&eacute </option>
+            <div class="modal-header">
 
-                                    </select>
-                                </div>
-                            </div>
-							
-							
-							
-							
-							<div class="form-group col-md-12">
-								<label class="col-md-3  control-label">Date cr&eacuteation:</label>
-								<div class="col-md-6 col-xs-12">
-									<div class="daterangepicker dropdown-menu ltr single opensright show-calendar picker_2 xdisplay">
-										<div class="calendar left single" style="display: block;"><div class="daterangepicker_input">
-											<input class="input-mini form-control active" type="text" name="daterangepicker_start" value="" style="display: none;"><i class="fa fa-calendar glyphicon glyphicon-calendar" style="display: none;"></i><div class="calendar-time" style="display: none;"><div></div><i class="fa fa-clock-o glyphicon glyphicon-time"></i></div></div><div class="calendar-table"><table class="table-condensed"><thead><tr><th class="prev available"><i class="fa fa-chevron-left glyphicon glyphicon-chevron-left"></i></th><th colspan="5" class="month">Oct 2016</th><th class="next available"><i class="fa fa-chevron-right glyphicon glyphicon-chevron-right"></i></th></tr><tr><th>Su</th><th>Mo</th><th>Tu</th><th>We</th><th>Th</th><th>Fr</th><th>Sa</th></tr></thead><tbody><tr><td class="weekend off available" data-title="r0c0">25</td><td class="off available" data-title="r0c1">26</td><td class="off available" data-title="r0c2">27</td><td class="off available" data-title="r0c3">28</td><td class="off available" data-title="r0c4">29</td><td class="off available" data-title="r0c5">30</td><td class="weekend available" data-title="r0c6">1</td></tr><tr><td class="weekend available" data-title="r1c0">2</td><td class="available" data-title="r1c1">3</td><td class="available" data-title="r1c2">4</td><td class="available" data-title="r1c3">5</td><td class="available" data-title="r1c4">6</td><td class="available" data-title="r1c5">7</td><td class="weekend available" data-title="r1c6">8</td></tr><tr><td class="weekend available" data-title="r2c0">9</td><td class="available" data-title="r2c1">10</td><td class="available" data-title="r2c2">11</td><td class="available" data-title="r2c3">12</td><td class="available" data-title="r2c4">13</td><td class="available" data-title="r2c5">14</td><td class="weekend available" data-title="r2c6">15</td></tr><tr><td class="weekend available" data-title="r3c0">16</td><td class="available" data-title="r3c1">17</td><td class="today active start-date active end-date available" data-title="r3c2">18</td><td class="available" data-title="r3c3">19</td><td class="available" data-title="r3c4">20</td><td class="available" data-title="r3c5">21</td><td class="weekend available" data-title="r3c6">22</td></tr><tr><td class="weekend available" data-title="r4c0">23</td><td class="available" data-title="r4c1">24</td><td class="available" data-title="r4c2">25</td><td class="available" data-title="r4c3">26</td><td class="available" data-title="r4c4">27</td><td class="available" data-title="r4c5">28</td><td class="weekend available" data-title="r4c6">29</td></tr><tr><td class="weekend available" data-title="r5c0">30</td><td class="available" data-title="r5c1">31</td><td class="off available" data-title="r5c2">1</td><td class="off available" data-title="r5c3">2</td><td class="off available" data-title="r5c4">3</td><td class="off available" data-title="r5c5">4</td><td class="weekend off available" data-title="r5c6">5</td></tr></tbody></table></div></div><div class="calendar right" style="display: none;"><div class="daterangepicker_input"><input class="input-mini form-control" type="text" name="daterangepicker_end" value="" style="display: none;"><i class="fa fa-calendar glyphicon glyphicon-calendar" style="display: none;"></i><div class="calendar-time" style="display: none;"><div></div><i class="fa fa-clock-o glyphicon glyphicon-time"></i></div></div><div class="calendar-table"><table class="table-condensed"><thead><tr><th></th><th colspan="5" class="month">Nov 2016</th><th class="next available"><i class="fa fa-chevron-right glyphicon glyphicon-chevron-right"></i></th></tr><tr><th>Su</th><th>Mo</th><th>Tu</th><th>We</th><th>Th</th><th>Fr</th><th>Sa</th></tr></thead><tbody><tr><td class="weekend off available" data-title="r0c0">30</td><td class="off available" data-title="r0c1">31</td><td class="available" data-title="r0c2">1</td><td class="available" data-title="r0c3">2</td><td class="available" data-title="r0c4">3</td><td class="available" data-title="r0c5">4</td><td class="weekend available" data-title="r0c6">5</td></tr><tr><td class="weekend available" data-title="r1c0">6</td><td class="available" data-title="r1c1">7</td><td class="available" data-title="r1c2">8</td><td class="available" data-title="r1c3">9</td><td class="available" data-title="r1c4">10</td><td class="available" data-title="r1c5">11</td><td class="weekend available" data-title="r1c6">12</td></tr><tr><td class="weekend available" data-title="r2c0">13</td><td class="available" data-title="r2c1">14</td><td class="available" data-title="r2c2">15</td><td class="available" data-title="r2c3">16</td><td class="available" data-title="r2c4">17</td><td class="available" data-title="r2c5">18</td><td class="weekend available" data-title="r2c6">19</td></tr><tr><td class="weekend available" data-title="r3c0">20</td><td class="available" data-title="r3c1">21</td><td class="available" data-title="r3c2">22</td><td class="available" data-title="r3c3">23</td><td class="available" data-title="r3c4">24</td><td class="available" data-title="r3c5">25</td><td class="weekend available" data-title="r3c6">26</td></tr><tr><td class="weekend available" data-title="r4c0">27</td><td class="available" data-title="r4c1">28</td><td class="available" data-title="r4c2">29</td><td class="available" data-title="r4c3">30</td><td class="off available" data-title="r4c4">1</td><td class="off available" data-title="r4c5">2</td><td class="weekend off available" data-title="r4c6">3</td></tr><tr><td class="weekend off available" data-title="r5c0">4</td><td class="off available" data-title="r5c1">5</td><td class="off available" data-title="r5c2">6</td><td class="off available" data-title="r5c3">7</td><td class="off available" data-title="r5c4">8</td><td class="off available" data-title="r5c5">9</td><td class="weekend off available" data-title="r5c6">10</td></tr></tbody></table></div></div><div class="ranges" style="display: none;"><div class="range_inputs"><button class="applyBtn btn btn-sm btn-success" type="button">Apply</button> <button class="cancelBtn btn btn-sm btn-default" type="button">Cancel</button></div></div></div>
-											<fieldset>
-												<div class="control-group">
-													<div class="controls">
-														<div class="col-md-11 xdisplay_inputx form-group has-feedback">
-															<input type="text" class="form-control has-feedback-left" id="single_cal4" placeholder="First Name" aria-describedby="inputSuccess2Status2">
-															<span class="fa fa-calendar-o form-control-feedback left" aria-hidden="true"></span>
-															<span id="inputSuccess2Status2" class="sr-only">(success)</span>
-														</div>
-													</div>
-												</div>
-											</fieldset>
-										</div>
-							</div>
-							
-							<div class="form-group col-md-12">
-								<label class="col-md-3  control-label">Date modification:</label>
-								<div class="col-md-6 col-xs-12">
-									<div class="daterangepicker dropdown-menu ltr single opensright show-calendar picker_2 xdisplay">
-										<div class="calendar left single" style="display: block;"><div class="daterangepicker_input">
-											<input class="input-mini form-control active" type="text" name="daterangepicker_start" value="" style="display: none;"><i class="fa fa-calendar glyphicon glyphicon-calendar" style="display: none;"></i><div class="calendar-time" style="display: none;"><div></div><i class="fa fa-clock-o glyphicon glyphicon-time"></i></div></div><div class="calendar-table"><table class="table-condensed"><thead><tr><th class="prev available"><i class="fa fa-chevron-left glyphicon glyphicon-chevron-left"></i></th><th colspan="5" class="month">Oct 2016</th><th class="next available"><i class="fa fa-chevron-right glyphicon glyphicon-chevron-right"></i></th></tr><tr><th>Su</th><th>Mo</th><th>Tu</th><th>We</th><th>Th</th><th>Fr</th><th>Sa</th></tr></thead><tbody><tr><td class="weekend off available" data-title="r0c0">25</td><td class="off available" data-title="r0c1">26</td><td class="off available" data-title="r0c2">27</td><td class="off available" data-title="r0c3">28</td><td class="off available" data-title="r0c4">29</td><td class="off available" data-title="r0c5">30</td><td class="weekend available" data-title="r0c6">1</td></tr><tr><td class="weekend available" data-title="r1c0">2</td><td class="available" data-title="r1c1">3</td><td class="available" data-title="r1c2">4</td><td class="available" data-title="r1c3">5</td><td class="available" data-title="r1c4">6</td><td class="available" data-title="r1c5">7</td><td class="weekend available" data-title="r1c6">8</td></tr><tr><td class="weekend available" data-title="r2c0">9</td><td class="available" data-title="r2c1">10</td><td class="available" data-title="r2c2">11</td><td class="available" data-title="r2c3">12</td><td class="available" data-title="r2c4">13</td><td class="available" data-title="r2c5">14</td><td class="weekend available" data-title="r2c6">15</td></tr><tr><td class="weekend available" data-title="r3c0">16</td><td class="available" data-title="r3c1">17</td><td class="today active start-date active end-date available" data-title="r3c2">18</td><td class="available" data-title="r3c3">19</td><td class="available" data-title="r3c4">20</td><td class="available" data-title="r3c5">21</td><td class="weekend available" data-title="r3c6">22</td></tr><tr><td class="weekend available" data-title="r4c0">23</td><td class="available" data-title="r4c1">24</td><td class="available" data-title="r4c2">25</td><td class="available" data-title="r4c3">26</td><td class="available" data-title="r4c4">27</td><td class="available" data-title="r4c5">28</td><td class="weekend available" data-title="r4c6">29</td></tr><tr><td class="weekend available" data-title="r5c0">30</td><td class="available" data-title="r5c1">31</td><td class="off available" data-title="r5c2">1</td><td class="off available" data-title="r5c3">2</td><td class="off available" data-title="r5c4">3</td><td class="off available" data-title="r5c5">4</td><td class="weekend off available" data-title="r5c6">5</td></tr></tbody></table></div></div><div class="calendar right" style="display: none;"><div class="daterangepicker_input"><input class="input-mini form-control" type="text" name="daterangepicker_end" value="" style="display: none;"><i class="fa fa-calendar glyphicon glyphicon-calendar" style="display: none;"></i><div class="calendar-time" style="display: none;"><div></div><i class="fa fa-clock-o glyphicon glyphicon-time"></i></div></div><div class="calendar-table"><table class="table-condensed"><thead><tr><th></th><th colspan="5" class="month">Nov 2016</th><th class="next available"><i class="fa fa-chevron-right glyphicon glyphicon-chevron-right"></i></th></tr><tr><th>Su</th><th>Mo</th><th>Tu</th><th>We</th><th>Th</th><th>Fr</th><th>Sa</th></tr></thead><tbody><tr><td class="weekend off available" data-title="r0c0">30</td><td class="off available" data-title="r0c1">31</td><td class="available" data-title="r0c2">1</td><td class="available" data-title="r0c3">2</td><td class="available" data-title="r0c4">3</td><td class="available" data-title="r0c5">4</td><td class="weekend available" data-title="r0c6">5</td></tr><tr><td class="weekend available" data-title="r1c0">6</td><td class="available" data-title="r1c1">7</td><td class="available" data-title="r1c2">8</td><td class="available" data-title="r1c3">9</td><td class="available" data-title="r1c4">10</td><td class="available" data-title="r1c5">11</td><td class="weekend available" data-title="r1c6">12</td></tr><tr><td class="weekend available" data-title="r2c0">13</td><td class="available" data-title="r2c1">14</td><td class="available" data-title="r2c2">15</td><td class="available" data-title="r2c3">16</td><td class="available" data-title="r2c4">17</td><td class="available" data-title="r2c5">18</td><td class="weekend available" data-title="r2c6">19</td></tr><tr><td class="weekend available" data-title="r3c0">20</td><td class="available" data-title="r3c1">21</td><td class="available" data-title="r3c2">22</td><td class="available" data-title="r3c3">23</td><td class="available" data-title="r3c4">24</td><td class="available" data-title="r3c5">25</td><td class="weekend available" data-title="r3c6">26</td></tr><tr><td class="weekend available" data-title="r4c0">27</td><td class="available" data-title="r4c1">28</td><td class="available" data-title="r4c2">29</td><td class="available" data-title="r4c3">30</td><td class="off available" data-title="r4c4">1</td><td class="off available" data-title="r4c5">2</td><td class="weekend off available" data-title="r4c6">3</td></tr><tr><td class="weekend off available" data-title="r5c0">4</td><td class="off available" data-title="r5c1">5</td><td class="off available" data-title="r5c2">6</td><td class="off available" data-title="r5c3">7</td><td class="off available" data-title="r5c4">8</td><td class="off available" data-title="r5c5">9</td><td class="weekend off available" data-title="r5c6">10</td></tr></tbody></table></div></div><div class="ranges" style="display: none;"><div class="range_inputs"><button class="applyBtn btn btn-sm btn-success" type="button">Apply</button> <button class="cancelBtn btn btn-sm btn-default" type="button">Cancel</button></div></div></div>
-											<fieldset>
-												<div class="control-group">
-													<div class="controls">
-														<div class="col-md-11 xdisplay_inputx form-group has-feedback">
-															<input type="text" class="form-control has-feedback-left" id="single_cal4" placeholder="First Name" aria-describedby="inputSuccess2Status2">
-															<span class="fa fa-calendar-o form-control-feedback left" aria-hidden="true"></span>
-															<span id="inputSuccess2Status2" class="sr-only">(success)</span>
-														</div>
-													</div>
-												</div>
-											</fieldset>
-										</div>
-							</div>
-					  
-					  
-                        </div>
-                    </div>
-                <div class="modal-footer">
-                    <button class="btn btn-danger" data-dismiss="modal"
-                            style="margin-left : 10px;"
-                            onclick="$('#message-box-Listes-elements').modal('hide')"><i
-                            class="fa fa-times-circle fa-right"></i>Annuler
-                    </button>
-                    <!--<button class="btn btn-info" type="submit" onclick="saveList()"><i
-                            class="fa fa-floppy-o"></i>Enregistrer-->
-
-                    <button class="btn btn-info"  onclick="addRowElement()"><span
-                            class="fa fa-floppy-o"></span>Enregistrer
-                    </button>
-                </div>
-					
-					
-                    <div class="modal-body">
-                        <div class="panel-heading" style="border-color: #E5E5E5; margin-top:-1px;margin-bottom:5px;"
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Élements de la liste</h4>
+				 <div class="panel-heading" style="border-color: #E5E5E5; margin-top:-1px;margin-bottom:5px;"
                              id="bar-menu1">
                             <div class="row">
-                                <button class="btn btn-default" id="add"
-                                        onclick="addRow(document.getElementById('tableau-elements'), document.getElementById('rowText').value);"
-                                        data-toggle="tooltip"
-                                        data-placement="bottom" title="Ajouter liste" style="font-size:20px;"><span
-                                        class="fa fa-plus"></span></button>
-                                <button class="btn btn-default" id="modify" onclick="composer()" data-toggle="tooltip"
+                                <button class="btn btn-default" id="modify" onclick="SelectMajElement()" data-toggle="tooltip"
                                         data-placement="bottom" title="Modifier élément" style="font-size:20px;"><span
                                         class="fa fa-edit"></span></button>
-                                <button class="btn btn-default" id="delete" onclick="composer()" data-toggle="tooltip"
+                                <button class="btn btn-default" id="delete" onclick="ConfirmMessageDelElement()" data-toggle="tooltip"
                                         data-placement="bottom" title="Supprimer élément" style="font-size:20px;"><span
                                         class="fa fa-trash"></span></button>
                             </div>
+                 </div>
+                <div class="panel-body tab-content">
+                    <div class="block">
+                        <div class="form-group col-md-12">
+                            <label class="col-md-3 control-label">Titre: </label>
+                            <div class="form control col-md-6">
+                                <input type="text" class="form-control" id="titleElement" name="titList" required/>
+                            </div>
                         </div>
+                        <div class="form-group col-md-12">
+                            <label class="col-md-3 control-label">Description: </label>
+                            <div class="form control col-md-6">
+                                        <textarea name="descList" id="descElement" rows="5"
+                                                  style="margin: 0px; width: 239px; height: 92px;" required></textarea>
+                            </div>
+                        </div>
+                        <div class="form-group col-md-12">
+                            <label class="col-md-3  control-label">Status:</label>
+                            <div class="col-md-6 col-xs-12">
+                                <select class="form-control select" id="statuElement">
+                                    <option value="à faire">A faire</option>
+                                    <option value="fait">Fait</option>
+                                    <option value="supprimé">Supprim&eacute</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group col-md-12">
+                            <label class="col-md-3  control-label">Date cr&eacuteation:</label>
+                            <div class="col-md-6 col-xs-12">
+                                <input id="date_creation" type="date">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-danger" data-dismiss="modal"
+                                style="margin-left : 10px;"
+                                onclick="$('#message-box-Listes-elements').modal('hide')"><i
+                                class="fa fa-times-circle fa-right"></i>Annuler
+                        </button>
+                        <!--<button class="btn btn-info" type="submit" onclick="saveList()"><i
+                                class="fa fa-floppy-o"></i>Enregistrer-->
+
+                        <button class="btn btn-info" onclick="addRowElement()"><span
+                                class="fa fa-floppy-o"></span>Enregistrer
+                        </button>
+						<button class="btn btn-info" onclick="majHtmlTableSelectRowElement()"><span
+                        class="fa fa-edit"></span>Modifier
+                </button>
+                    </div>
+                    <div class="modal-body">
                         <div class="col-md-12 col-sm-12 col-xs-12">
                             <div class="x_panel">
 
@@ -704,13 +658,13 @@
 
                                     <div class="table-responsive">
                                         <table class="table table-striped jambo_table bulk_action"
-                                               id="tableau-elements">
+                                               id="tableau_elements">
                                             <tr>
                                                 <th class="column-title">Titre</th>
                                                 <th class="column-title">Description</th>
                                                 <th class="column-title">Date création</th>
                                                 <th class="column-title">Date modification</th>
-												<th class="a-center ">
+                                                <th class="a-center ">
                                                     <input type="checkbox" class="flat" name="table_records">Status
                                                 </th>
                                             </tr>
@@ -721,13 +675,11 @@
                         </div>
                     </div>
                 </div>
+            </div>
         </div>
+
+
     </div>
-	
-
- 
-                    
-
 </div>
 
 <script type="text/javascript">
@@ -743,15 +695,16 @@
             }
         });
     });
+	
 
 </script>
 <style>
-body .modal-admin {
-    /* new custom width */
-    width: 750px;
-    /* must be half of the width, minus scrollbar on the left (30px) */
-    margin-left: -375px;
-}
+    body .modal-admin {
+        /* new custom width */
+        width: 750px;
+        /* must be half of the width, minus scrollbar on the left (30px) */
+        margin-left: -375px;
+    }
 </style>
 
 <script src="../production/js/listeSettings.js"></script>
