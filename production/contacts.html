@@ -49,23 +49,6 @@
                     </div>
                 </div>
                 <!-- /sidebar menu -->
-
-                <!-- /menu footer buttons -->
-                <div class="sidebar-footer hidden-small">
-                    <a data-toggle="tooltip" data-placement="top" title="Settings">
-                        <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
-                    </a>
-                    <a data-toggle="tooltip" data-placement="top" title="FullScreen">
-                        <span class="glyphicon glyphicon-fullscreen" aria-hidden="true"></span>
-                    </a>
-                    <a data-toggle="tooltip" data-placement="top" title="Lock">
-                        <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
-                    </a>
-                    <a data-toggle="tooltip" data-placement="top" title="Logout" href="login.html">
-                        <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
-                    </a>
-                </div>
-                <!-- /menu footer buttons -->
             </div>
         </div>
 
@@ -128,8 +111,6 @@
                                 <div class="row">
                                     <div class="page-title">
                                         <div class="title_right">
-
-
                                             <button class="btn btn-default" id="addUser"
                                                     data-toggle="modal" data-target="#message-box-edit-user"
                                                     data-placement="bottom" title="Ajouter utilistateur"
@@ -140,7 +121,8 @@
                                                     data-placement="bottom" title="Modifier utilisateur"
                                                     style="font-size:20px;"><span
                                                     class="fa fa-edit"></span></button>
-                                            <button class="btn btn-danger" id="deleteUser" onclick="composer()"
+                                            <button class="btn btn-danger" id="deleteUser"
+                                                    onclick="$('#message-box-delete-user').modal('show')"
                                                     data-toggle="tooltip"
                                                     data-placement="bottom" title="Supprimer utilisateur"
                                                     style="font-size:20px;"><span
@@ -396,9 +378,9 @@
                                     <div class="form-group col-md-6">
                                         <div class='input-group date' id='datetimepicker1'>
                                             <input type='text' data-format="dd/MM/yyyy" class="form-control"/>
-                    <span class="input-group-addon">
-                        <span class="glyphicon glyphicon-calendar"></span>
-                    </span>
+                                            <span class="input-group-addon">
+                                                <span class="glyphicon glyphicon-calendar"></span>
+                                            </span>
                                         </div>
                                     </div>
                                 </div>
@@ -447,23 +429,7 @@
         </div>
     </div>
 
-    <div class="message-box message-box-warning-" id="message-box-delete-user">
-        <div class="mb-container">
-            <div class="mb-middle">
-                <div class="mb-title"><span class="fa fa-warning"></span> Attention</div>
-                <div class="mb-content">
-                    <p>Êtes-vous sur de vouloir perdre toutes vos modification et fermer la fenêtre ?</p>
-                </div>
-                <div class="mb-footer">
-                    <button class="btn btn-default btn-lg pull-right mb-control-close" style="margin-left : 10px;"
-                            onclick="$('#message-box-edit-user').modal('hide')">Non
-                    </button>
-                    <button class="btn btn-default btn-lg pull-right" onclick="">Oui
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
+
 </div>
 
 <!-- jQuery -->
