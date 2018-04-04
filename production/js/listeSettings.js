@@ -1,7 +1,7 @@
 
 
 var table=document.getElementById("table");
-var tableau-elements=document.getElementById("tableau-elements");
+var tableau_elements=document.getElementById("tableau_elements");
 var rIndex;
 
 function addMembres() {
@@ -26,7 +26,8 @@ function addMembres() {
 }
 
 
-function addRow() {
+function addRow(){
+	
      var 		newRow = table.insertRow(table.length),
                 cel1 = newRow.insertCell(0),
                 cel2 = newRow.insertCell(1),
@@ -49,34 +50,39 @@ function addRow() {
 		
 }
 
-function addRowElement()
-{
-     var 		newRow = tableau-elements.insertRow(tableau-elements.length),
+	function addRowElement(){	
+	var 		maintenant=new Date();
+	var 		jour=maintenant.getDate();
+	var 		mois=maintenant.getMonth()+1;
+	var 		an=maintenant.getFullYear();
+	var 		d=an+"-"+mois+"-"+jour;
+    var 		newRow = tableau_elements.insertRow(tableau_elements.length),
                 cel1 = newRow.insertCell(0),
                 cel2 = newRow.insertCell(1),
                 cel3 = newRow.insertCell(2),
 				cel4 = newRow.insertCell(3),
 				cel5 = newRow.insertCell(4),
 				
-                titElement = document.getElementById("titElement").value,
+                titleElement = document.getElementById("titleElement").value,
                 descElement = document.getElementById("descElement").value,
-				date-creation = document.getElementById("date-creation").value,
-				date-modification = document.getElementById("date-modification").value,
-				//date-modification = document.write(Date()),
-				descElement = document.getElementById("descElement").value;
-                
+				date_creation = document.getElementById("date_creation").value;
+				//date-modification = document.getElementById("date-modification").value,
+				//document.write(d);
+				date_modification = d;
+				statuElement = document.getElementById("statuElement").value;   
 	
-        cel1.innerHTML = titElement;
+        cel1.innerHTML = titleElement;
         cel2.innerHTML = descElement;
-        cel3.innerHTML = date-creation;
-		cel4.innerHTML = date-modification;
-		cel5.innerHTML = descElement;
-		print("tzzzzzzz");
+        cel3.innerHTML = date_creation;
+		cel4.innerHTML = date_modification;
+		cel5.innerHTML = statuElement;
+		//print("tzzzzzzz");
 	  //$('#message-box-edit-list').modal('hide');
 	  
-		//selectedRowToInputElement();
+		selectedRowToInputElement();
 		
 }
+
 function selectedRowToInput(){
 	
 	//var rIndex;
@@ -93,23 +99,23 @@ function selectedRowToInput(){
 	}
 }
 
-/*function selectedRowToInputElement(){
+function selectedRowToInputElement(){
 	
 	//var rIndex;
-	for (var i=0; i<tableau-elements.rows.length; i++){
-		tableau-elements.rows[i].onclick=function(){
+	for (var i=0; i<tableau_elements.rows.length; i++){
+		tableau_elements.rows[i].onclick=function(){
 			
 			rIndex = this.rowIndex;
 			console.log(rIndex);
-			document.getElementById("titListModif").value=this.cells[0].innerHTML;
-			document.getElementById("descListModif").value=this.cells[1].innerHTML;
-			document.getElementById("typeListModif").value=this.cells[2].innerHTML;
-			document.getElementById("descListModif").value=this.cells[1].innerHTML;
-			document.getElementById("typeListModif").value=this.cells[2].innerHTML;
+			document.getElementById("titleElement").value=this.cells[0].innerHTML;
+			document.getElementById("descElement").value=this.cells[1].innerHTML;
+			document.getElementById("date_creation").value=this.cells[2].innerHTML;
+			//document.getElementById("descListModif").value=this.cells[3].innerHTML;
+			document.getElementById("statuElement").value=this.cells[4].innerHTML;
 			//$('#message-box-maj-list').modal('show');
 		}
 	}
-}*/
+}
 
 function majHtmlTableSelectRow(){
 	
@@ -123,7 +129,60 @@ function majHtmlTableSelectRow(){
 	
 }
 
+function SelectMajElement(){
+	
+	var 		maintenant=new Date();
+	var 		jour=maintenant.getDate();
+	var 		mois=maintenant.getMonth()+1;
+	var 		an=maintenant.getFullYear();
+	var 		d=an+"-"+mois+"-"+jour;
+	var titleElement = document.getElementById("titleElement").value,
+		descElement = document.getElementById("descElement").value,
+		date_creation = document.getElementById("date_creation").value,
+		date_modification = d,
+		statuElement = document.getElementById("statuElement").value;
+		
+}
+
+function majHtmlTableSelectRowElement(){
+	var 		maintenant=new Date();
+	var 		jour=maintenant.getDate();
+	var 		mois=maintenant.getMonth()+1;
+	var 		an=maintenant.getFullYear();
+	var 		d=an+"-"+mois+"-"+jour;
+	var titleElement = document.getElementById("titleElement").value,
+		descElement = document.getElementById("descElement").value,
+		date_creation = document.getElementById("date_creation").value,
+		date_modification = d,
+		statuElement = document.getElementById("statuElement").value;
+		tableau_elements.rows[rIndex].cells[0].innerHTML = titleElement;
+		tableau_elements.rows[rIndex].cells[1].innerHTML = descElement;
+		tableau_elements.rows[rIndex].cells[2].innerHTML = date_creation;
+		tableau_elements.rows[rIndex].cells[3].innerHTML = date_modification;
+		tableau_elements.rows[rIndex].cells[4].innerHTML = statuElement;
+	
+}
+
 function delSelectedRow()
 {
 	table.deleteRow(rIndex);
 }
+
+function delSelectedRowElement()
+{
+	tableau_elements.deleteRow(rIndex);
+}
+
+function ConfirmMessageDelElement() {
+       if (confirm("Voulez-vous supprimer cette élement ?")) { 
+           // Clic sur OK
+           delSelectedRowElement();
+       }
+   }
+   
+function ConfirmMessageDelList() {
+       if (confirm("Voulez-vous supprimer cette liste ?")) { 
+           // Clic sur OK
+           delSelectedRow();
+       }
+   }
