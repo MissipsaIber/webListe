@@ -6,16 +6,13 @@ var rIndex;
 
 function addMembres() {
 	
+
 	var membre
 	var label
 	
-	
 	membre=document.getElementById("membres").value
-	
     $("#divLabelMembres").append("<div class='form control col-md-2'></div><label for=\"name\">Test</label></div>");
-	
 	document.getElementById("membres").value=""
-	
 	
 	/*indicecondition++;
     var divselect = document.getElementById("condition");
@@ -85,7 +82,7 @@ function addRow(){
 
 function selectedRowToInput(){
 	
-	//var rIndex;
+	//var rowIndex;
 	for (var i=0; i<table.rows.length; i++){
 		table.rows[i].onclick=function(){
 			
@@ -101,7 +98,7 @@ function selectedRowToInput(){
 
 function selectedRowToInputElement(){
 	
-	//var rIndex;
+	//var rowIndex;
 	for (var i=0; i<tableau_elements.rows.length; i++){
 		tableau_elements.rows[i].onclick=function(){
 			
