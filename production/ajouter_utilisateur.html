@@ -95,7 +95,7 @@
                 <div class="col-lg-10">
                     <div class="well bs-component live-less-editor-hovercontainer"
                          data-relatedvars="legend-color,legend-border-color,input-color,input-height-base,input-bg,input-border,input-border-radius,input-border-focus,input-color-placeholder,input-bg-disabled,input-height-small,input-height-large,state-success-text,state-success-bg,state-warning-text,state-warning-bg,state-danger-text,state-danger-bg,input-group-addon-bg,input-group-addon-border-color,input-border-radius-large,input-border-radius-small">
-                        <form class="form-horizontal">
+                        <form class="form-horizontal" name="ajout_utilisateur" method="post" action="php/ajouterUtilisateur.php">
                         <fieldset>
                             <legend>Informations</legend>
 
@@ -111,14 +111,14 @@
                                 <label for="userPassword" class="col-lg-2 control-label">Mot de passe</label>
                                 <div class="col-lg-8">
                                     <input type="password" class="form-control" id="userPassword"
-                                           >
+                                         name="passeword"  >
                                 </div>
                             </div>
 
                             <div class="form-group">
                                 <label for="userPassword2" class="col-lg-2 control-label">Confirmation mot de passe</label>
                                 <div class="col-lg-8">
-                                    <input type="password" class="form-control" id="userPassword2">
+                                    <input type="password" class="form-control" id="userPassword2" name="passeword1">
                                 </div>
                             </div>
 
@@ -137,21 +137,21 @@
                                     <div class="radio">
                                         <label>
                                             <input type="radio" name="optionsRadios" id="optionsRadios1"
-                                                   value="radioUser" checked>
+                                                   value="1" checked>
                                             Utilisateur
                                         </label>
                                     </div>
                                     <div class="radio">
                                         <label>
                                             <input type="radio" name="optionsRadios" id="optionsRadios2"
-                                                   value="radioAdmin">
+                                                   value="0">
                                             Administrateur
                                         </label>
                                     </div>
                                 </div>
                             </div>
                         </fieldset>
-                        </form>
+                        
                     </div>
                 </div>
             </div>
@@ -162,10 +162,12 @@
                         onclick=""><i
                         class="fa fa-times-circle fa-right"></i> Annuler
                 </button>
-                <button class="btn btn-info" type="submit" onclick="saveUser()"><i
+                <button class="btn btn-info" type="submit"><i
                         class="fa fa-floppy-o"></i> Enregistrer
                 </button>
+				
             </div>
+			</form>
         </div>
     </div>
     <!-- /page content -->

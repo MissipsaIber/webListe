@@ -144,26 +144,29 @@
 
                                     <div class="clearfix"></div>
 <?php
-include('connect_base.php');
+include('php/connect_base.php');
 
 
 $requete = "SELECT IdUser , pseudo  , passeword, permission,role 
 			FROM utilisateur;";	
 			
 $resultat = mysql_query($requete) or die(mysql_error());
+$r="";
+while ($row=mysql_fetch_row($resultat)){
+$role=$row[4];
+if($role==0){$r="administrateur";}else{$r="utilisateur";}
 
-while ($row=mysql_fetch_row($resultat))
-{
                                echo'    <div class="col-md-4 col-sm-4 col-xs-12 profile_details">
                                         <div class="well profile_view">
                                             <div class="col-sm-12">
-                                                <h4 class="brief"><i>Étudiant</i></h4>
+                                                <h4 class="brief"><i>'.$row[1].'</i></h4>
                                                 <div class="left col-xs-7">
                                                   
                                                     <p><strong>A propos: </strong> Étudiant informatique </p>
                                                     <ul class="list-unstyled">
-                                                        <li><i class="fa fa-building"></i> Rôle:</li>
-                                                        <li><i class="fa fa-phone"></i> Permission :</li>
+													
+                                                        <li><i class="fa fa-building"></i> Rôle:'.$r.'</li>
+                                                        <li><i class="fa fa-phone"></i> Permission :'.$row[3].'</li>
                                                     </ul>
                                                 </div>
                                                 <div class="right col-xs-5 text-center">
@@ -175,18 +178,25 @@ while ($row=mysql_fetch_row($resultat))
 
                                                     <input type="checkbox" checked data-toggle="toggle"
                                                            data-onstyle="warning" data-size="mini" name="userSelected"
-                                                           id="userSelected" value=""/>
-
-                                                    <button type="button" class="btn btn-primary btn-xs">
+                                                           id="userSelected" value=""/>';?>
+                                                    <button type="button" class="btn btn-primary btn-xs" onclick="<?php editUser($row[0]) ?>">
                                                         <i class="fa fa-user"> </i> Voir profil
                                                     </button>
+													<?php
+												echo'	
                                                 </div>
                                             </div>
                                         </div>
                                     </div>';
 
                                  
-  }                              
+  }  
+  
+?>
+
+
+
+
 
                                 
                                 </div>
@@ -207,6 +217,19 @@ while ($row=mysql_fetch_row($resultat))
         </footer>
         <!-- /footer content -->
     </div>
+<?php
+function editUser($id){
+
+echo "$('#message-box-edit-user').modal('show')";
+
+$requete="select pseudo , passeword , permission,role 
+			from utilisateur  where IdUser ='$id'";
+$resultat=mysql_query($requete) or die(mysql_error());
+$row=mysql_fetch_array($resultat);
+
+}
+?>
+
 
     <div class="modal fade" id="message-box-edit-user" tabindex="-1" style="left: 10%; width: 80%; margin-left: 0px;"
          role="dialog">
@@ -216,7 +239,7 @@ while ($row=mysql_fetch_row($resultat))
                     <div class="modal-header">
 
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        <h4 class="modal-title">Créer un utilisateur</h4>
+                        <h4 class="modal-title">Modifier un utilisateur</h4>
                     </div>
 
                     <div class="modal-body">
@@ -229,39 +252,32 @@ while ($row=mysql_fetch_row($resultat))
                                     </div>
                                 </div>
                                 <div class="form-group col-md-12">
-                                    <label class="col-md-4 control-label">Nom: </label>
-                                    <div class="form control col-md-6">
-                                        <input type="text" class="form-control" id="nomUser" name="nomUser"/>
-                                    </div>
+                                <label class="col-md-4 control-label">Permission </label>
+                                <div class="form control col-md-6">
+                                    <input type="number" min="0" max="1" class="form-control" id="userPermission"
+                                           name="userPermission" value="0"/>
                                 </div>
+                            </div>
 
                                 <div class="form-group col-md-12">
-                                    <label class="col-md-4 control-label">Prénom: </label>
-                                    <div class="form control col-md-6">
-                                        <input type="text" class="form-control" id="prenUser" name="prenUser"/>
+                                <label class="col-md-4 control-label">Type</label>
+                                <div div class="form control col-md-6">
+                                    <div class="radio">
+                                        <label>
+                                            <input type="radio" name="optionsRadios" id="optionsRadios1"
+                                                   value="1" checked>
+                                            Utilisateur
+                                        </label>
+                                    </div>
+                                    <div class="radio">
+                                        <label>
+                                            <input type="radio" name="optionsRadios" id="optionsRadios2"
+                                                   value="0">
+                                            Administrateur
+                                        </label>
                                     </div>
                                 </div>
-
-                                <div class="form-group col-md-12">
-                                    <label class="col-md-4 control-label">Date de naissance: </label>
-                                    <!--<div class="form control col-md-6">-->
-                                    <!--<input type="date" data-date-format="mm/dd/yyyy" value="01/01/1990"-->
-                                    <!--class="form-control" id="dateBirth" name="dateBirth"/>-->
-                                    <!--<div class="input-group-addon">-->
-                                    <!--<span class="glyphicon glyphicon-th"></span>-->
-                                    <!--</div>-->
-                                    <!--</div>-->
-
-
-                                    <div class="form-group col-md-6">
-                                        <div class='input-group date' id='datetimepicker1'>
-                                            <input type='text' data-format="dd/MM/yyyy" class="form-control"/>
-                                            <span class="input-group-addon">
-                                                <span class="glyphicon glyphicon-calendar"></span>
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
+                            </div>
                                 <script type="text/javascript">
                                     $(function () {
                                         $('#datetimepicker1').datetimepicker();
@@ -274,7 +290,7 @@ while ($row=mysql_fetch_row($resultat))
                                 <!--</script>-->
 
 
-                                <div class="form-group col-md-12">
+                              <div class="form-group col-md-12">
                                     <label class="col-md-4 control-label">Mot de passe: </label>
                                     <div class="form control col-md-6">
                                         <input type="password" class="form-control" id="password" name="password"/>
@@ -292,20 +308,27 @@ while ($row=mysql_fetch_row($resultat))
                     </div>
 
                     <div class="modal-footer">
+					
                         <button class="btn btn-danger"
                                 style="margin-left : 10px;"
+								
                                 onclick="$('#message-box-edit-user').modal('hide')"><i
                                 class="fa fa-times-circle fa-right"></i> Annuler
                         </button>
                         <button class="btn btn-info" type="submit" onclick="saveUser()"><i
-                                class="fa fa-floppy-o"></i> Enregistrer
+                                class="fa fa-floppy-o"></i> Modifier
                         </button>
+						
                     </div>
 
                 </form>
             </div>
         </div>
     </div>
+
+		
+	
+
 
 
 </div>

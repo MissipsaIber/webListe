@@ -30,7 +30,7 @@ function addRow(){
                 cel2 = newRow.insertCell(1),
                 cel3 = newRow.insertCell(2),
 
-                titList = document.getElementById("titList").value,
+                titList =  document.getElementById("titList").value,
                 descList = document.getElementById("descList").value,
                 typeList = document.getElementById("typeList").value;
 	
