@@ -40,7 +40,7 @@
                             <li><a><i class="fa fa-home"></i> Gestion des utilisateurs <span
                                     class="fa fa-chevron-down"></span></a>
                                 <ul class="nav child_menu">
-                                    <li><a href="contacts.html">Liste des utilisateurs</a></li>
+                                    <li><a href="contacts.php">Liste des utilisateurs</a></li>
                                     <li><a href="ajouter_utilisateur.html">Ajouter un utilisateur</a></li>
                                 </ul>
 
@@ -87,7 +87,7 @@
             <div class="">
                 <div class="page-title">
                     <div class="title_left">
-                        <h3>Contacts Design</h3>
+                        <h3>Liste des Utilisateur </h3>
                     </div>
                     <div class="title_right">
                         <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
@@ -126,20 +126,7 @@
                                                     style="font-size:20px;"><span
                                                     class="fa fa-trash"></span></button>
                                         </div>
-                                        <div class="title_left">
-                                            <ul class="pagination pagination-split">
-                                                <li><a href="#">A</a></li>
-                                                <li><a href="#">B</a></li>
-                                                <li><a href="#">C</a></li>
-                                                <li><a href="#">D</a></li>
-                                                <li><a href="#">E</a></li>
-                                                <li>...</li>
-                                                <li><a href="#">W</a></li>
-                                                <li><a href="#">X</a></li>
-                                                <li><a href="#">Y</a></li>
-                                                <li><a href="#">Z</a></li>
-                                            </ul>
-                                        </div>
+                                        
                                     </div>
 
                                     <div class="clearfix"></div>
@@ -176,9 +163,7 @@ if($role==0){$r="administrateur";}else{$r="utilisateur";}
                                             <div class="col-xs-12 bottom text-left">
                                                 <div class="col-xs-12 col-sm-6 emphasis">
 
-                                                    <input type="checkbox" checked data-toggle="toggle"
-                                                           data-onstyle="warning" data-size="mini" name="userSelected"
-                                                           id="userSelected" value=""/>';?>
+                                                    ';?>
                                                     <button type="button" class="btn btn-primary btn-xs" onclick="<?php editUser($row[0]) ?>">
                                                         <i class="fa fa-user"> </i> Voir profil
                                                     </button>
