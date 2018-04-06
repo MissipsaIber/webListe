@@ -1,6 +1,4 @@
 <?php
-
-
 $username=$_POST['username'];
 $passeword=$_POST['passworde'];
 if ($username =="sofiane" && $passeword =="soso"){header("Location: index.html");}

@@ -6,16 +6,13 @@ var rIndex;
 
 function addMembres() {
 	
+
 	var membre
 	var label
 	
-	
 	membre=document.getElementById("membres").value
-	
     $("#divLabelMembres").append("<div class='form control col-md-2'></div><label for=\"name\">Test</label></div>");
-	
 	document.getElementById("membres").value=""
-	
 	
 	/*indicecondition++;
     var divselect = document.getElementById("condition");
@@ -76,16 +73,13 @@ function addRow(){
         cel3.innerHTML = date_creation;
 		cel4.innerHTML = date_modification;
 		cel5.innerHTML = statuElement;
-		//print("tzzzzzzz");
-	  //$('#message-box-edit-list').modal('hide');
-	  
 		selectedRowToInputElement();
-		
+
 }
 
 function selectedRowToInput(){
 	
-	//var rIndex;
+	//var rowIndex;
 	for (var i=0; i<table.rows.length; i++){
 		table.rows[i].onclick=function(){
 			
@@ -101,7 +95,7 @@ function selectedRowToInput(){
 
 function selectedRowToInputElement(){
 	
-	//var rIndex;
+	//var rowIndex;
 	for (var i=0; i<tableau_elements.rows.length; i++){
 		tableau_elements.rows[i].onclick=function(){
 			
@@ -110,9 +104,9 @@ function selectedRowToInputElement(){
 			document.getElementById("titleElement").value=this.cells[0].innerHTML;
 			document.getElementById("descElement").value=this.cells[1].innerHTML;
 			document.getElementById("date_creation").value=this.cells[2].innerHTML;
-			//document.getElementById("descListModif").value=this.cells[3].innerHTML;
+
 			document.getElementById("statuElement").value=this.cells[4].innerHTML;
-			//$('#message-box-maj-list').modal('show');
+
 		}
 	}
 }
