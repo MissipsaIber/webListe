@@ -2,14 +2,25 @@
  * Created by IBERRAKENE Missipsa on 05/04/2018.
  */
 
-
-var table=document.getElementById("table");
-var tableauMembres=document.getElementById("tableau_membres");
+var tableauMembres = document.getElementById("tableau_membres");
 var rowIndex;
 
-function addRow(){
+function modalAddList() {
+    $('#message-box-edit-list').modal('show')
 
-        var newRow = table.insertRow(table.length),
+    document.getElementById("titList").value = ""
+    document.getElementById("descList").value = ""
+    document.getElementById("membre").value = "";
+
+    //document.getElementById("droitMembre").value=""
+    var Parent = document.getElementById("tableau_membres");
+    while (Parent.hasChildNodes()) {
+        Parent.removeChild(Parent.firstChild);
+    }
+}
+
+function addRow() {
+    var newRow = table.insertRow(table.length),
         cel1 = newRow.insertCell(0),
         cel2 = newRow.insertCell(1),
         cel3 = newRow.insertCell(2),
@@ -25,13 +36,12 @@ function addRow(){
     //$('#message-box-edit-list').modal('hide');
 
     selectedRowToInput();
-    titList="";
-    descList="";
-    typeList="";
-
+    titList = "";
+    descList = "";
+    typeList = "";
 }
 
-function addRowElement(){
+function addRowMembre() {
     var membre;
     var droit;
     var newRow = tableauMembres.insertRow(tableauMembres.length),
@@ -43,68 +53,46 @@ function addRowElement(){
 
     cel1.innerHTML = membre;
     cel2.innerHTML = droit;
-
-    selectedRowToInputElement();
+    document.getElementById("membre").value = ""
+    document.getElementById("droitMembre").value = "lecture"
+    selectedRowToInputMembre();
 }
 
-function selectedRowToInput(){
-
-    //var rowIndex;
-    for (var i=0; i<table.rows.length; i++){
-        table.rows[i].onclick=function(){
-
+function selectedRowToInput() {
+    for (var i = 0; i < table.rows.length; i++) {
+        table.rows[i].onclick = function () {
             rowIndex = this.rowIndex;
             console.log(rowIndex);
-            document.getElementById("titListModif").value=this.cells[0].innerHTML;
-            document.getElementById("descListModif").value=this.cells[1].innerHTML;
-            document.getElementById("typeListModif").value=this.cells[2].innerHTML;
+            document.getElementById("titListModif").value = this.cells[0].innerHTML;
+            document.getElementById("descListModif").value = this.cells[1].innerHTML;
+            document.getElementById("typeListModif").value = this.cells[2].innerHTML;
             //$('#message-box-maj-list').modal('show');
         }
     }
 }
 
-function selectedRowToInputElement(){
-
-    //var rowIndex;
-    for (var i=0; i<tableauMembres.rows.length; i++){
-        tableauMembres.rows[i].onclick=function(){
-
+function selectedRowToInputMembre() {
+    for (var i = 0; i < tableauMembres.rows.length; i++) {
+        tableauMembres.rows[i].onclick = function () {
             rowIndex = this.rowIndex;
+            var tr = tableauMembres.getElementsByTagName("TR")
 
-            document.getElementById("membre").value=this.cells[0].innerHTML;
-            document.getElementById("droit").value=this.cells[1].innerHTML;
+            if (tr[rowIndex - 1].className == "success") {
+                tr[rowIndex - 1].className = "";
+                rowIndex = 0;
+                document.getElementById("membre").value = "";
+                document.getElementById("droitMembre").value = "lecture";
+            }
+            else {
+                tr[rowIndex - 1].className = "success"
+                document.getElementById("membre").value = this.cells[0].innerHTML;
+                document.getElementById("droitMembre").value = this.cells[1].innerHTML;
+            }
         }
     }
 }
 
-function majHtmlTableSelectRow(){
-
-    var titListModif = document.getElementById("titListModif").value,
-        descListModif = document.getElementById("descListModif").value,
-        typeListModif = document.getElementById("typeListModif").value;
-
-    table.rows[rowIndex].cells[0].innerHTML = titListModif;
-    table.rows[rowIndex].cells[1].innerHTML = descListModif;
-    table.rows[rowIndex].cells[2].innerHTML = typeListModif;
-
-}
-
-function SelectMajElement(){
-
-    var 		maintenant=new Date();
-    var 		jour=maintenant.getDate();
-    var 		mois=maintenant.getMonth()+1;
-    var 		an=maintenant.getFullYear();
-    var 		d=an+"-"+mois+"-"+jour;
-    var titleElement = document.getElementById("titleElement").value,
-        descElement = document.getElementById("descElement").value,
-        date_creation = document.getElementById("date_creation").value,
-        date_modification = d,
-        statuElement = document.getElementById("statuElement").value;
-
-}
-
-function majHtmlTableSelectRowElement(){
+function majTableSelectedMembre() {
 
     var membre = document.getElementById("membre").value,
         droit = document.getElementById("droit").value;
@@ -113,26 +101,13 @@ function majHtmlTableSelectRowElement(){
     tableauMembres.rows[rowIndex].cells[1].innerHTML = droit;
 }
 
-function delSelectedRow()
-{
-    table.deleteRow(rowIndex);
-}
-
-function delSelectedRowElement()
-{
+function delSelectedRowMembre() {
     tableauMembres.deleteRow(rowIndex);
 }
 
-function ConfirmMessageDelElement() {
+function ConfirmMessageDelMembre() {
     if (confirm("Voulez-vous supprimer ce membre ?")) {
         // Clic sur OK
-        delSelectedRowElement();
-    }
-}
-
-function ConfirmMessageDelList() {
-    if (confirm("Voulez-vous supprimer cette liste ?")) {
-        // Clic sur OK
-        delSelectedRow();
+        delSelectedRowMembre();
     }
 }
